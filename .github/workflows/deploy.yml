@@ -1,0 +1,106 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate static site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cek file wajib ada
+        run: |
+          for f in index.html robots.txt sitemap.xml; do
+            if [ ! -f "$f" ]; then
+              echo "::error file=$f::File wajib tidak ditemukan"
+              exit 1
+            fi
+          done
+
+      - name: Validasi XML (sitemap & robots)
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq libxml2-utils >/dev/null
+          xmllint --noout sitemap.xml
+          echo "sitemap.xml valid"
+
+      - name: Cek referensi aset lokal tidak broken
+        run: |
+          python3 - <<'PY'
+          import pathlib, re, sys
+
+          root = pathlib.Path(".")
+          missing = []
+          pattern = re.compile(r'(?:href|src)="([^"#?]+)"')
+
+          for html in root.rglob("*.html"):
+              if ".git" in html.parts:
+                  continue
+              text = html.read_text(encoding="utf-8", errors="ignore")
+              for ref in pattern.findall(text):
+                  if ref.startswith(("http://", "https://", "//", "mailto:", "tel:", "data:", "javascript:")):
+                      continue
+                  if ref.startswith("/"):
+                      target = (root / ref.lstrip("/")).resolve()
+                  else:
+                      target = (html.parent / ref).resolve()
+                  if not target.exists():
+                      missing.append(f"{html}: {ref}")
+
+          if missing:
+              for m in missing:
+                  print(f"::error::{m}")
+              sys.exit(1)
+          print("Semua referensi aset lokal OK")
+          PY
+
+      - name: Cek file dev tidak ter-commit sebagai halaman publik
+        run: |
+          leaked=$(find . -path ./.git -prune -o \
+            -name '*.py' -print -o -name 'requirements.txt' -print \
+            -o -name 'seo-*.json' -print -o -name 'competitor-urls.json' -print \
+            -o -name '*.zip' -print | head -20)
+          if [ -n "$leaked" ]; then
+            echo "File development berikut ada di repo (akan dikecualikan dari deploy):"
+            echo "$leaked"
+          fi
+
+  deploy:
+    name: Deploy ke Rumahweb
+    needs: validate
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upload via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftps
+          local-dir: ./
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/docs/**
+            **/DEPLOY.md
+            **/*.py
+            **/requirements.txt
+            **/*.zip
+            **/.gitignore
+            .ftp-deploy-sync-state.json
+          log-level: standard
