@@ -1,0 +1,133 @@
+{
+  "domain": "iconnetwifipln.com",
+  "sumber": "https://iconnetwifipln.com/sitemap_index.xml",
+  "tanggal_crawl": "2026-09-11",
+  "total_url": 35,
+  "catatan": "sitemap_index.xml memuat 6 sub-sitemap. Dari 35 URL, hanya ~19 berisi konten nyata; ~16 sisanya halaman template WordPress yang tidak relevan dengan bisnis ICONNET.",
+  "kategori": {
+    "konten_nyata": {
+      "jumlah": 19,
+      "keterangan": "Halaman yang benar-benar menargetkan keyword dan berpeluang ranking.",
+      "url": [
+        {
+          "url": "https://iconnetwifipln.com/",
+          "jenis": "homepage",
+          "target_keyword": "daftar iconnet PLN Jawa Tengah & Yogyakarta"
+        },
+        {
+          "url": "https://iconnetwifipln.com/blog-iconnet/",
+          "jenis": "blog index",
+          "target_keyword": "artikel / daftar iconnet PLN"
+        },
+        {
+          "url": "https://iconnetwifipln.com/daftar-iconnet-jawa-tengah/",
+          "jenis": "landing wilayah",
+          "target_keyword": "daftar pasang iconnet Jawa Tengah"
+        },
+        {
+          "url": "https://iconnetwifipln.com/daftar-iconnet-yogyakarta/",
+          "jenis": "landing wilayah",
+          "target_keyword": "daftar iconnet Yogyakarta",
+          "catatan": "Duplikat hampir identik dengan halaman Jawa Tengah (505 kata, meta description sama)."
+        },
+        {
+          "url": "https://iconnetwifipln.com/daftar-iconnet-online-solusi-digital-terdepan-dari-pln/",
+          "jenis": "artikel",
+          "target_keyword": "daftar iconnet online"
+        },
+        {
+          "url": "https://iconnetwifipln.com/daftar-iconnet-pln-internet-fiber-optik-andal-untuk-semua-kalangan-di-jawa-tengah-yogyakarta/",
+          "jenis": "artikel",
+          "target_keyword": "iconnet PLN internet fiber optik Jawa Tengah Yogyakarta"
+        },
+        {
+          "url": "https://iconnetwifipln.com/iconnet-pln-di-seluruh-jawa-tengah/",
+          "jenis": "artikel",
+          "target_keyword": "iconnet PLN di seluruh Jawa Tengah"
+        },
+        {
+          "url": "https://iconnetwifipln.com/intip-pilihan-dan-harga-layanan-iconnet-wifi-pln/",
+          "jenis": "artikel",
+          "target_keyword": "harga layanan iconnet wifi PLN"
+        },
+        {
+          "url": "https://iconnetwifipln.com/mengenal-iconnet-dari-pln-lebih-terjangkau/",
+          "jenis": "artikel",
+          "target_keyword": "mengenal iconnet dari PLN"
+        },
+        {
+          "url": "https://iconnetwifipln.com/pasang-iconnet-di-purwokerto-banyumas-dan-sekitarnya-promo-x-nodebat/",
+          "jenis": "artikel + landing kota",
+          "target_keyword": "pasang iconnet Purwokerto Banyumas promo nodebat"
+        },
+        {
+          "url": "https://iconnetwifipln.com/penawaran-khusus-iconnet-pln-untuk-warga-jawa-tengah-yogyakarta/",
+          "jenis": "artikel",
+          "target_keyword": "penawaran khusus iconnet PLN Jawa Tengah Yogyakarta"
+        },
+        {
+          "url": "https://iconnetwifipln.com/pilihan-layanan-internet-rumah-indihome-biznet-myrepublic-dan-alternatif-iconnet-pln/",
+          "jenis": "artikel komparasi",
+          "target_keyword": "layanan internet rumah indihome biznet myrepublic iconnet"
+        },
+        {
+          "url": "https://iconnetwifipln.com/profil/",
+          "jenis": "halaman profil",
+          "target_keyword": "tentang kami mitra resmi iconnet"
+        },
+        {
+          "url": "https://iconnetwifipln.com/promo-iconnet-desember-2025-gratis-instalasi-bonus-3-bulan/",
+          "jenis": "halaman promo",
+          "target_keyword": "promo iconnet Desember gratis instalasi"
+        },
+        {
+          "url": "https://iconnetwifipln.com/promo-iconnet-mei-2026/",
+          "jenis": "halaman promo",
+          "target_keyword": "promo iconnet Mei 2026"
+        },
+        {
+          "url": "https://iconnetwifipln.com/promo-iconnet-november-2025-extra-nodebat-gratis-instalasi/",
+          "jenis": "halaman promo",
+          "target_keyword": "promo iconnet November extra nodebat"
+        },
+        {
+          "url": "https://iconnetwifipln.com/promo-iconnet-oktober-seru-2025/",
+          "jenis": "halaman promo",
+          "target_keyword": "promo iconnet Oktober 2025"
+        },
+        {
+          "url": "https://iconnetwifipln.com/promo-iconnet-seru-internet-cepat-tanpa-batas-harga-bersahabat/",
+          "jenis": "halaman promo",
+          "target_keyword": "promo iconnet internet cepat tanpa batas"
+        },
+        {
+          "url": "https://iconnetwifipln.com/topik/iconnet/",
+          "jenis": "halaman topik/arsip",
+          "target_keyword": "topik iconnet"
+        }
+      ]
+    },
+    "template_sampah": {
+      "jumlah": 16,
+      "keterangan": "Halaman bawaan tema WordPress (portfolio & kategori proyek) yang tidak relevan dengan bisnis ICONNET. Tetap menambah massa URL dan internal link, tapi tidak menargetkan keyword.",
+      "url": [
+        "https://iconnetwifipln.com/cms_block_cat/uncategorized/",
+        "https://iconnetwifipln.com/portfolio/",
+        "https://iconnetwifipln.com/portfolio/a-lacus-bibendum-pulvinar/",
+        "https://iconnetwifipln.com/portfolio/et-vestibulum-quis-a-suspendisse/",
+        "https://iconnetwifipln.com/portfolio/imperdiet-mauris-a-nontin/",
+        "https://iconnetwifipln.com/portfolio/leo-uteu-ullamcorper/",
+        "https://iconnetwifipln.com/portfolio/netus-eu-mollis-hac-dignis/",
+        "https://iconnetwifipln.com/portfolio/potenti-parturient-parturie/",
+        "https://iconnetwifipln.com/portfolio/rhoncus-quisque-sollicitudin/",
+        "https://iconnetwifipln.com/portfolio/suspendisse-quam-at-vestibulum/",
+        "https://iconnetwifipln.com/portfolio/venenatis-nam-phasellus/",
+        "https://iconnetwifipln.com/project-cat/accessories/",
+        "https://iconnetwifipln.com/project-cat/decor/",
+        "https://iconnetwifipln.com/project-cat/furniture/",
+        "https://iconnetwifipln.com/project-cat/kitchen/",
+        "https://iconnetwifipln.com/project-cat/lighting/"
+      ]
+    }
+  }
+}

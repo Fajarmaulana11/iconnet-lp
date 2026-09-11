@@ -1,0 +1,98 @@
+{
+ "https://www.jatengwifipln.com": {
+  "robots_status": 200,
+  "robots_txt": "User-agent: *\r\nAllow: /\r\n\r\nSitemap: https://www.jatengwifipln.com/sitemap.xml",
+  "sitemaps_declared": [
+   "https://www.jatengwifipln.com/sitemap.xml"
+  ],
+  "sitemap_url_count": 1,
+  "sitemap_urls": [
+   "https://www.jatengwifipln.com/"
+  ],
+  "googlebot_test": {
+   "chrome": {
+    "passed": true,
+    "attempts": 1,
+    "server": "Apache",
+    "bytes": 83143
+   },
+   "googlebot": {
+    "passed": true,
+    "attempts": 1,
+    "server": "Apache",
+    "bytes": 83143
+   },
+   "googlebot-smartphone": {
+    "passed": true,
+    "attempts": 1,
+    "server": "Apache",
+    "bytes": 83143
+   }
+  }
+ },
+ "https://iconnetwifipln.com": {
+  "robots_status": 200,
+  "robots_txt": "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://iconnetwifipln.com/sitemap_index.xml\n",
+  "sitemaps_declared": [
+   "https://iconnetwifipln.com/sitemap_index.xml"
+  ],
+  "sitemap_url_count": 35,
+  "sitemap_urls": [
+   "https://iconnetwifipln.com/",
+   "https://iconnetwifipln.com/blog-iconnet/",
+   "https://iconnetwifipln.com/cms_block_cat/uncategorized/",
+   "https://iconnetwifipln.com/daftar-iconnet-jawa-tengah/",
+   "https://iconnetwifipln.com/daftar-iconnet-online-solusi-digital-terdepan-dari-pln/",
+   "https://iconnetwifipln.com/daftar-iconnet-pln-internet-fiber-optik-andal-untuk-semua-kalangan-di-jawa-tengah-yogyakarta/",
+   "https://iconnetwifipln.com/daftar-iconnet-yogyakarta/",
+   "https://iconnetwifipln.com/iconnet-pln-di-seluruh-jawa-tengah/",
+   "https://iconnetwifipln.com/intip-pilihan-dan-harga-layanan-iconnet-wifi-pln/",
+   "https://iconnetwifipln.com/mengenal-iconnet-dari-pln-lebih-terjangkau/",
+   "https://iconnetwifipln.com/pasang-iconnet-di-purwokerto-banyumas-dan-sekitarnya-promo-x-nodebat/",
+   "https://iconnetwifipln.com/penawaran-khusus-iconnet-pln-untuk-warga-jawa-tengah-yogyakarta/",
+   "https://iconnetwifipln.com/pilihan-layanan-internet-rumah-indihome-biznet-myrepublic-dan-alternatif-iconnet-pln/",
+   "https://iconnetwifipln.com/portfolio/",
+   "https://iconnetwifipln.com/portfolio/a-lacus-bibendum-pulvinar/",
+   "https://iconnetwifipln.com/portfolio/et-vestibulum-quis-a-suspendisse/",
+   "https://iconnetwifipln.com/portfolio/imperdiet-mauris-a-nontin/",
+   "https://iconnetwifipln.com/portfolio/leo-uteu-ullamcorper/",
+   "https://iconnetwifipln.com/portfolio/netus-eu-mollis-hac-dignis/",
+   "https://iconnetwifipln.com/portfolio/potenti-parturient-parturie/",
+   "https://iconnetwifipln.com/portfolio/rhoncus-quisque-sollicitudin/",
+   "https://iconnetwifipln.com/portfolio/suspendisse-quam-at-vestibulum/",
+   "https://iconnetwifipln.com/portfolio/venenatis-nam-phasellus/",
+   "https://iconnetwifipln.com/profil/",
+   "https://iconnetwifipln.com/project-cat/accessories/",
+   "https://iconnetwifipln.com/project-cat/decor/",
+   "https://iconnetwifipln.com/project-cat/furniture/",
+   "https://iconnetwifipln.com/project-cat/kitchen/",
+   "https://iconnetwifipln.com/project-cat/lighting/",
+   "https://iconnetwifipln.com/promo-iconnet-desember-2025-gratis-instalasi-bonus-3-bulan/",
+   "https://iconnetwifipln.com/promo-iconnet-mei-2026/",
+   "https://iconnetwifipln.com/promo-iconnet-november-2025-extra-nodebat-gratis-instalasi/",
+   "https://iconnetwifipln.com/promo-iconnet-oktober-seru-2025/",
+   "https://iconnetwifipln.com/promo-iconnet-seru-internet-cepat-tanpa-batas-harga-bersahabat/",
+   "https://iconnetwifipln.com/topik/iconnet/"
+  ],
+  "googlebot_test": {
+   "chrome": {
+    "passed": true,
+    "attempts": 1,
+    "server": "LiteSpeed",
+    "bytes": 196711
+   },
+   "googlebot": {
+    "passed": true,
+    "attempts": 1,
+    "server": "LiteSpeed",
+    "bytes": 196711
+   },
+   "googlebot-smartphone": {
+    "passed": true,
+    "attempts": 1,
+    "server": "LiteSpeed",
+    "bytes": 196711
+   }
+  }
+ }
+}
