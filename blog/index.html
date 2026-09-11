@@ -1,1146 +1,1585 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog ICONNET Jawa Tengah — Tips Internet, Info Paket & Update Terbaru</title>
-  <meta name="description" content="Blog resmi ICONNET Jawa Tengah. Baca artikel terbaru seputar internet fiber optic, tips WiFi rumah, info paket terbaru, dan panduan daftar ICONNET PLN." />
-  <meta name="keywords" content="blog ICONNET Jawa Tengah, tips internet rumah, paket ICONNET terbaru, cara daftar ICONNET, wifi PLN Jateng" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.jatengwifipln.com/blog/" />
-
-  <meta property="og:title" content="Blog ICONNET Jawa Tengah — Tips Internet & Info Paket Terbaru" />
-  <meta property="og:description" content="Baca artikel terbaru seputar internet fiber optic, tips WiFi rumah, info paket ICONNET, dan panduan berlangganan di Jawa Tengah." />
-  <meta property="og:url" content="https://www.jatengwifipln.com/blog/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="id_ID" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type":"ListItem","position":1,"name":"Beranda","item":"https://www.jatengwifipln.com/"},
-      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.jatengwifipln.com/blog/"}
-    ]
-  }
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="icon" type="image/png" href="../images/faveicon.jpg" />
-
-  <style>
-    /* ===== BLOG-SPECIFIC STYLES ===== */
-    :root {
-      --blog-accent: #0057D9;
-      --blog-bg: #F5F6FA;
-      --blog-card-bg: #FFFFFF;
-      --blog-border: #E4E6F0;
-      --blog-muted: #6B7280;
-      --blog-tag-bg: #EEF3FF;
-      --blog-tag-color: #0057D9;
-    }
-
-    /* HERO BLOG */
-    .blog-hero {
-      background: linear-gradient(135deg, #001F6B 0%, #003DA5 50%, #0057D9 100%);
-      padding: 72px 0 80px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .blog-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse at 20% 50%, rgba(255,210,0,0.12) 0%, transparent 55%),
-        radial-gradient(ellipse at 80% 20%, rgba(0,153,255,0.15) 0%, transparent 50%);
-      pointer-events: none;
-    }
-
-    .blog-hero .container { position: relative; z-index: 1; }
-
-    .blog-hero-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.2);
-      color: rgba(255,255,255,0.9);
-      font-size: 13px;
-      font-weight: 600;
-      padding: 6px 16px;
-      border-radius: 100px;
-      margin-bottom: 20px;
-      letter-spacing: 0.3px;
-    }
-
-    .blog-hero h1 {
-      font-size: clamp(26px, 4.5vw, 42px);
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.25;
-      margin-bottom: 14px;
-    }
-
-    .blog-hero h1 span {
-      color: #FFD200;
-    }
-
-    .blog-hero p {
-      color: rgba(255,255,255,0.82);
-      font-size: 16px;
-      max-width: 540px;
-      margin: 0 auto 32px;
-      line-height: 1.7;
-    }
-
-    .blog-search-wrap {
-      max-width: 480px;
-      margin: 0 auto;
-      position: relative;
-    }
-
-    .blog-search-wrap input {
-      width: 100%;
-      padding: 14px 52px 14px 20px;
-      border-radius: 100px;
-      border: none;
-      font-size: 15px;
-      font-family: inherit;
-      outline: none;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-      color: #1A1D2E;
-    }
-
-    .blog-search-wrap .search-icon {
-      position: absolute;
-      right: 18px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--blog-accent);
-      font-size: 20px;
-      pointer-events: none;
-    }
-
-    /* BREADCRUMB */
-    .breadcrumb {
-      padding: 14px 0;
-      border-bottom: 1px solid var(--blog-border);
-      background: #fff;
-    }
-
-    .breadcrumb-inner {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      color: var(--blog-muted);
-    }
-
-    .breadcrumb-inner a {
-      color: var(--blog-accent);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .breadcrumb-inner a:hover { text-decoration: underline; }
-
-    .breadcrumb-inner i { font-size: 14px; }
-
-    /* LAYOUT BLOG */
-    .blog-layout {
-      padding: 52px 0 72px;
-      background: var(--blog-bg);
-    }
-
-    .blog-grid-wrap {
-      display: grid;
-      grid-template-columns: 1fr 320px;
-      gap: 36px;
-      align-items: start;
-    }
-
-    /* KATEGORI FILTER */
-    .kategori-filter {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 32px;
-    }
-
-    .kat-btn {
-      padding: 7px 18px;
-      border-radius: 100px;
-      border: 1.5px solid var(--blog-border);
-      background: #fff;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--blog-muted);
-      cursor: pointer;
-      transition: all 0.18s;
-      font-family: inherit;
-    }
-
-    .kat-btn:hover, .kat-btn.active {
-      background: var(--blog-accent);
-      border-color: var(--blog-accent);
-      color: #fff;
-    }
-
-    /* FEATURED ARTICLE */
-    .article-featured {
-      background: var(--blog-card-bg);
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid var(--blog-border);
-      margin-bottom: 28px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      transition: box-shadow 0.2s, transform 0.2s;
-    }
-
-    .article-featured:hover {
-      box-shadow: 0 12px 36px rgba(0,61,165,0.1);
-      transform: translateY(-2px);
-    }
-
-    .article-featured .feat-img {
-      background: linear-gradient(135deg, #003DA5 0%, #0057D9 60%, #0099FF 100%);
-      min-height: 240px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .article-featured .feat-img::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 30% 70%, rgba(255,210,0,0.2) 0%, transparent 60%);
-    }
-
-    .feat-img-icon {
-      font-size: 72px;
-      color: rgba(255,255,255,0.25);
-      position: relative;
-      z-index: 1;
-    }
-
-    .article-featured .feat-body {
-      padding: 32px 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .feat-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      background: #FEF9E0;
-      color: #B45309;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 4px 12px;
-      border-radius: 100px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      width: fit-content;
-      margin-bottom: 14px;
-    }
-
-    .article-featured h2 {
-      font-size: clamp(17px, 2.5vw, 22px);
-      font-weight: 700;
-      color: #1A1D2E;
-      line-height: 1.4;
-      margin-bottom: 12px;
-    }
-
-    .article-featured h2 a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .article-featured h2 a:hover { color: var(--blog-accent); }
-
-    .article-excerpt {
-      font-size: 14px;
-      color: var(--blog-muted);
-      line-height: 1.7;
-      margin-bottom: 20px;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .article-meta {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-size: 12px;
-      color: #9CA3AF;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-    }
-
-    .article-meta span {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .btn-baca {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--blog-accent);
-      color: #fff;
-      font-size: 13px;
-      font-weight: 700;
-      padding: 10px 22px;
-      border-radius: 100px;
-      text-decoration: none;
-      width: fit-content;
-      transition: background 0.18s, transform 0.18s;
-    }
-
-    .btn-baca:hover {
-      background: #003DA5;
-      transform: translateX(2px);
-    }
-
-    /* ARTICLE GRID */
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .article-card {
-      background: var(--blog-card-bg);
-      border-radius: 16px;
-      border: 1px solid var(--blog-border);
-      overflow: hidden;
-      transition: box-shadow 0.2s, transform 0.2s;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .article-card:hover {
-      box-shadow: 0 8px 28px rgba(0,61,165,0.09);
-      transform: translateY(-3px);
-    }
-
-    .card-img-wrap {
-      height: 140px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 48px;
-      color: rgba(255,255,255,0.3);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card-img-wrap::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 30% 70%, rgba(255,210,0,0.15) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    .bg-blue-1 { background: linear-gradient(135deg, #003DA5, #0099FF); }
-    .bg-blue-2 { background: linear-gradient(135deg, #0057D9, #00C2FF); }
-    .bg-green { background: linear-gradient(135deg, #15803D, #16a34a); }
-    .bg-indigo { background: linear-gradient(135deg, #4338CA, #6366F1); }
-    .bg-orange { background: linear-gradient(135deg, #C2410C, #EA580C); }
-    .bg-teal { background: linear-gradient(135deg, #0D9488, #14B8A6); }
-    .bg-purple { background: linear-gradient(135deg, #7C3AED, #A855F7); }
-    .bg-rose { background: linear-gradient(135deg, #BE123C, #F43F5E); }
-
-    .card-body {
-      padding: 20px 18px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      background: var(--blog-tag-bg);
-      color: var(--blog-tag-color);
-      font-size: 11px;
-      font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 100px;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.4px;
-      width: fit-content;
-    }
-
-    .card-body h3 {
-      font-size: 15px;
-      font-weight: 700;
-      color: #1A1D2E;
-      line-height: 1.45;
-      margin-bottom: 8px;
-    }
-
-    .card-body h3 a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .card-body h3 a:hover { color: var(--blog-accent); }
-
-    .card-body p {
-      font-size: 13px;
-      color: var(--blog-muted);
-      line-height: 1.65;
-      flex: 1;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      margin-bottom: 14px;
-    }
-
-    .card-footer-meta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 11px;
-      color: #9CA3AF;
-      padding-top: 12px;
-      border-top: 1px solid var(--blog-border);
-    }
-
-    .card-footer-meta .read-more {
-      color: var(--blog-accent);
-      font-weight: 700;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 3px;
-    }
-
-    .card-footer-meta .read-more:hover { text-decoration: underline; }
-
-    /* PAGINATION */
-    .pagination {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 40px;
-    }
-
-    .page-btn {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      border: 1.5px solid var(--blog-border);
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--blog-muted);
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.18s;
-    }
-
-    .page-btn:hover, .page-btn.active {
-      background: var(--blog-accent);
-      border-color: var(--blog-accent);
-      color: #fff;
-    }
-
-    /* ===== SIDEBAR ===== */
-    .sidebar { display: flex; flex-direction: column; gap: 24px; }
-
-    .sidebar-card {
-      background: var(--blog-card-bg);
-      border-radius: 16px;
-      border: 1px solid var(--blog-border);
-      padding: 22px 20px;
-    }
-
-    .sidebar-card h3 {
-      font-size: 14px;
-      font-weight: 700;
-      color: #1A1D2E;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .sidebar-card h3 i {
-      color: var(--blog-accent);
-      font-size: 18px;
-    }
-
-    /* CTA SIDEBAR */
-    .sidebar-cta {
-      background: linear-gradient(135deg, #003DA5 0%, #0057D9 100%);
-      border: none;
-      color: #fff;
-      text-align: center;
-    }
-
-    .sidebar-cta h3 { color: #fff; justify-content: center; }
-
-    .sidebar-cta p {
-      font-size: 13px;
-      color: rgba(255,255,255,0.85);
-      line-height: 1.6;
-      margin-bottom: 16px;
-    }
-
-    .sidebar-cta .btn-wa-sidebar {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: #25D366;
-      color: #fff;
-      font-size: 13px;
-      font-weight: 700;
-      padding: 11px 20px;
-      border-radius: 100px;
-      text-decoration: none;
-      transition: background 0.18s;
-    }
-
-    .sidebar-cta .btn-wa-sidebar:hover { background: #1EB358; }
-
-    /* PROMO SIDEBAR */
-    .promo-sidebar-badge {
-      background: #FEF9E0;
-      border: 1.5px solid #FCD34D;
-      border-radius: 12px;
-      padding: 14px 16px;
-      margin-bottom: 14px;
-    }
-
-    .promo-sidebar-badge p {
-      font-size: 13px;
-      color: #92400E;
-      font-weight: 600;
-      margin: 0;
-      line-height: 1.5;
-    }
-
-    .promo-sidebar-badge span {
-      font-size: 11px;
-      color: #B45309;
-      display: block;
-      margin-top: 4px;
-    }
-
-    /* ARTIKEL POPULER SIDEBAR */
-    .popular-list { display: flex; flex-direction: column; gap: 14px; }
-
-    .popular-item {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .popular-item:hover .popular-title { color: var(--blog-accent); }
-
-    .popular-num {
-      min-width: 28px;
-      height: 28px;
-      background: var(--blog-tag-bg);
-      color: var(--blog-accent);
-      font-size: 12px;
-      font-weight: 800;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    .popular-title {
-      font-size: 13px;
-      font-weight: 600;
-      color: #1A1D2E;
-      line-height: 1.45;
-      transition: color 0.15s;
-    }
-
-    .popular-date {
-      font-size: 11px;
-      color: #9CA3AF;
-      margin-top: 3px;
-      display: block;
-    }
-
-    /* KATEGORI SIDEBAR */
-    .kat-sidebar-list { display: flex; flex-direction: column; gap: 8px; }
-
-    .kat-sidebar-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 9px 12px;
-      border-radius: 10px;
-      background: var(--blog-bg);
-      text-decoration: none;
-      color: #374151;
-      font-size: 13px;
-      font-weight: 500;
-      transition: background 0.15s, color 0.15s;
-    }
-
-    .kat-sidebar-item:hover {
-      background: var(--blog-tag-bg);
-      color: var(--blog-accent);
-    }
-
-    .kat-sidebar-item .kat-count {
-      background: var(--blog-border);
-      color: var(--blog-muted);
-      font-size: 11px;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 100px;
-    }
-
-    /* NEWSLETTER */
-    .newsletter-form { display: flex; flex-direction: column; gap: 10px; }
-
-    .newsletter-form input {
-      padding: 10px 14px;
-      border-radius: 10px;
-      border: 1.5px solid var(--blog-border);
-      font-size: 13px;
-      font-family: inherit;
-      outline: none;
-      transition: border-color 0.18s;
-    }
-
-    .newsletter-form input:focus { border-color: var(--blog-accent); }
-
-    .newsletter-form button {
-      padding: 11px;
-      border-radius: 10px;
-      background: var(--blog-accent);
-      color: #fff;
-      font-size: 13px;
-      font-weight: 700;
-      border: none;
-      cursor: pointer;
-      font-family: inherit;
-      transition: background 0.18s;
-    }
-
-    .newsletter-form button:hover { background: #003DA5; }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 900px) {
-      .blog-grid-wrap { grid-template-columns: 1fr; }
-      .sidebar { display: none; }
-      .article-featured { grid-template-columns: 1fr; }
-      .article-featured .feat-img { min-height: 180px; }
-    }
-
-    @media (max-width: 600px) {
-      .articles-grid { grid-template-columns: 1fr; }
-      .kategori-filter { gap: 8px; }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- ===== NAVBAR (sama persis dengan index.html) ===== -->
-  <header class="navbar" id="navbar">
-    <div class="container nav-inner">
-      <a href="/" class="logo">
-        <img src="../images/iconnet normal.png" alt="ICONNET Jawa Tengah — WiFi PLN" height="36" width="auto" loading="eager" />
-      </a>
-      <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
-        <a href="/#keunggulan">Keunggulan</a>
-        <a href="/#paket">Paket</a>
-        <a href="/#cara-daftar">Cara Daftar</a>
-        <a href="/#faq">FAQ</a>
-        <a href="/#coverage">Area Layanan</a>
-        <a href="/blog/index.html" class="active">Blog</a>
-      </nav>
-      <a href="https://wa.me/6281339646353?text=Halo+ICONNET%2C+saya+ingin+tanya+paket+internet" class="btn-wa-nav" target="_blank" rel="noopener">
-        <i class="ti ti-brand-whatsapp"></i>
-        <span>Hubungi Kami</span>
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="Buka menu">
-        <i class="ti ti-menu-2"></i>
-      </button>
-    </div>
-  </header>
-
-  <!-- ===== PROMO TICKER (sama dengan index.html) ===== -->
-  <style>
-    .promo-banner-ticker {
-      background: linear-gradient(90deg, #16a34a, #15803d);
-      color: #fff;
-      padding: 10px 0;
-      overflow: hidden;
-      white-space: nowrap;
-      position: sticky;
-      top: 64px;
-      z-index: 99;
-    }
-    .promo-ticker-track {
-      display: inline-flex;
-      animation: ticker-scroll 28s linear infinite;
-    }
-    .promo-ticker-track:hover { animation-play-state: paused; }
-    .promo-ticker-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 14px;
-      font-weight: 600;
-      padding: 0 48px;
-    }
-    .promo-ticker-item a { color: #fff; text-decoration: underline; }
-    .promo-ticker-sep { opacity: 0.5; font-size: 18px; padding: 0 8px; }
-    @keyframes ticker-scroll {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-  </style>
-
-  <!-- PROMO TICKER -->
-   <div class="promo-banner-ticker">
-    <div class="promo-ticker-track">
-      <span class="promo-ticker-item">🎁 &nbsp;<strong>PROMO BULAN SEPTEMBER 2026</strong> &nbsp;|&nbsp; GRATIS Biaya Pemasangan untuk semua paket kecuali ICONNET BIZ!&nbsp; <a href="https://wa.me/6281339646353?text=Halo+ICONNET%2C+saya+mau+daftar+promo" target="_blank" rel="noopener">Daftar via WA →</a></span>
-      <span class="promo-ticker-sep">✦</span>
-      <span class="promo-ticker-item">⚡ Internet Fiber PLN mulai <strong>Rp170ribuan/bulan</strong> — Unlimited tanpa FUP</span>
-      <span class="promo-ticker-sep">✦</span>
-      <span class="promo-ticker-item">📶 Tersedia di Semarang, Solo, Purwokerto, Magelang &amp; seluruh Jawa Tengah</span>
-      <span class="promo-ticker-sep">✦</span>
-      <span class="promo-ticker-item">🎁 &nbsp;<strong>PROMO BULAN SEPTEMBER 2026</strong> &nbsp;|&nbsp; GRATIS Biaya Pemasangan untuk semua paket kecuali ICONNET BIZ!&nbsp; <a href="https://wa.me/6281339646353?text=Halo+ICONNET%2C+saya+mau+daftar+promo" target="_blank" rel="noopener">Daftar via WA →</a></span>
-      <span class="promo-ticker-sep">✦</span>
-      <span class="promo-ticker-item">⚡ Internet Fiber PLN mulai <strong>Rp170ribuan/bulan</strong> — Unlimited tanpa FUP</span>
-      <span class="promo-ticker-sep">✦</span>
-      <span class="promo-ticker-item">📶 Tersedia di Semarang, Solo, Purwokerto, Magelang &amp; seluruh Jawa Tengah</span>
-      <span class="promo-ticker-sep">✦</span>
-    </div>
-  </div>
-
-  <!-- ===== BLOG HERO ===== -->
-  <section class="blog-hero">
-    <div class="container">
-      <span class="blog-hero-label"><i class="ti ti-news"></i> Layanan Informasi Terbaru ICONNET</span>
-      <h1>Blog <span>ICONNET</span> Jawa Tengah</h1>
-      <p>Temukan tips internet rumah, info paket terbaru, panduan daftar, dan update seputar WiFi PLN fiber optik di Jawa Tengah.</p>
-      <div class="blog-search-wrap">
-        <input type="text" placeholder="Cari artikel, tips, info paket..." aria-label="Cari artikel blog" />
-        <i class="ti ti-search search-icon"></i>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== BREADCRUMB ===== -->
-  <div class="breadcrumb">
-    <div class="container breadcrumb-inner">
-      <a href="/"><i class="ti ti-home"></i> Beranda</a>
-      <i class="ti ti-chevron-right"></i>
-      <span>Blog</span>
-    </div>
-  </div>
-
-  <!-- ===== MAIN BLOG LAYOUT ===== -->
-  <section class="blog-layout">
-    <div class="container">
-      <div class="blog-grid-wrap">
-
-        <!-- ===== KONTEN UTAMA ===== -->
-        <main>
-
-          <!-- FILTER KATEGORI -->
-          <div class="kategori-filter">
-            <button class="kat-btn active">Semua</button>
-            <button class="kat-btn">Info Paket</button>
-            <button class="kat-btn">Tips & Trik</button>
-            <button class="kat-btn">Area Layanan</button>
-            <button class="kat-btn">Cara Daftar</button>
-            <button class="kat-btn">Promo</button>
-          </div>
-
-          <!-- ARTIKEL FEATURED -->
-          <article class="article-featured">
-            <div class="feat-img">
-              <i class="ti ti-wifi feat-img-icon"></i>
-            </div>
-            <div class="feat-body">
-              <div class="feat-badge"><i class="ti ti-star"></i> Artikel Unggulan</div>
-              <h2><a href="harga-paket/index.html">Harga Paket ICONNET Jawa Tengah Terbaru 2026 — Lengkap dengan Cara Daftar Mudah & Cepat</a></h2>
-              <div class="article-meta">
-                <span><i class="ti ti-calendar"></i> 4 Juni 2026</span>
-                <span><i class="ti ti-clock"></i> 6 menit baca</span>
-                <span><i class="ti ti-tag"></i> Info Paket</span>
-              </div>
-              <p class="article-excerpt">
-                Mau pasang internet ICONNET di Jawa Tengah tapi bingung soal harga? Di artikel ini kami rangkum lengkap semua pilihan paket — mulai dari Reguler, Promo, Bundling 6 & 12 bulan, hingga paket Bisnis — lengkap dengan harga terbaru 2026 dan promo gratis pemasangan yang sedang berjalan.
-              </p>
-              <a href="harga-paket/index.html" class="btn-baca">
-                Baca Selengkapnya <i class="ti ti-arrow-right"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- GRID ARTIKEL -->
-          <div class="articles-grid">
-
-            <article class="article-card">
-              <div class="card-img-wrap bg-blue-2">
-                <i class="ti ti-list-check"></i>
-              </div>
-              <div class="card-body">
-                <span class="card-tag"><i class="ti ti-notes"></i> Cara Daftar</span>
-                <h3><a href="cara-daftar/index.html">Cara Daftar ICONNET Online di Jawa Tengah — Mudah Tanpa Harus ke Kantor</a></h3>
-                <p>Langkah demi langkah cara mendaftar ICONNET dari rumah via WhatsApp. Mulai dari cek area, pilih paket, hingga teknisi datang ke rumahmu.</p>
-                <div class="card-footer-meta">
-                  <span><i class="ti ti-calendar"></i> 3 Juni 2026 · 4 mnt baca</span>
-                  <a href="cara-daftar/index.html" class="read-more">Baca <i class="ti ti-arrow-right"></i></a>
-                </div>
-              </div>
-            </article>
-
-            <article class="article-card">
-              <div class="card-img-wrap bg-green">
-                <i class="ti ti-map-pin"></i>
-              </div>
-              <div class="card-body">
-                <span class="card-tag" style="background:#DCFCE7;color:#16a34a;"><i class="ti ti-map"></i> Area Layanan</span>
-                <h3><a href="iconnet-semarang/index.html">ICONNET Semarang — Internet Fiber PLN Cepat untuk Warga Kota & Sekitarnya</a></h3>
-                <p>Info lengkap ICONNET di Semarang, Ungaran, Demak, Mranggen dan sekitarnya. Cek coverage, harga paket, dan cara daftar khusus area Semarang.</p>
-                <div class="card-footer-meta">
-                  <span><i class="ti ti-calendar"></i> 2 Juni 2026 · 5 mnt baca</span>
-                  <a href="iconnet-semarang/index.html" class="read-more">Baca <i class="ti ti-arrow-right"></i></a>
-                </div>
-              </div>
-            </article>
-
-            <article class="article-card">
-              <div class="card-img-wrap bg-indigo">
-                <i class="ti ti-bolt"></i>
-              </div>
-              <div class="card-body">
-                <span class="card-tag"><i class="ti ti-bulb"></i> Tips & Trik</span>
-                <h3><a href="cara-pilih-wifi/index.html">5 Tips Memilih Paket Internet Rumah yang Tepat Sesuai Kebutuhan Keluarga</a></h3>
-                <p>Bingung pilih paket 35, 50, atau 100 Mbps? Panduan lengkap menentukan paket internet yang sesuai jumlah pengguna dan aktivitas digitalmu.</p>
-                <div class="card-footer-meta">
-                  <span><i class="ti ti-calendar"></i> 1 Juni 2026 · 5 mnt baca</span>
-                  <a href="cara-pilih-wifi/index.html" class="read-more">Baca <i class="ti ti-arrow-right"></i></a>
-                </div>
-              </div>
-            </article>
-
-            <article class="article-card">
-              <div class="card-img-wrap bg-orange">
-                <i class="ti ti-gift"></i>
-              </div>
-              <div class="card-body">
-                <span class="card-tag" style="background:#FEF3C7;color:#B45309;"><i class="ti ti-tag"></i> Promo</span>
-                <h3><a href="promo-terbaru/index.html">Promo ICONNET Juni 2026: Gratis Biaya Pemasangan Semua Paket — Berlaku s/d 15 Juni!</a></h3>
-                <p>Manfaatkan promo terbatas ini untuk pasang internet fiber optic PLN tanpa biaya instalasi. Cek syarat dan cara klaimnya di sini sebelum kehabisan.</p>
-                <div class="card-footer-meta">
-                  <span><i class="ti ti-calendar"></i> 1 Juni 2026 · 3 mnt baca</span>
-                  <a href="promo-terbaru/index.html" class="read-more">Baca <i class="ti ti-arrow-right"></i></a>
-                </div>
-              </div>
-            </article>
-
-            <article class="article-card">
-              <div class="card-img-wrap bg-teal">
-                <i class="ti ti-map-pin"></i>
-              </div>
-              <div class="card-body">
-                <span class="card-tag" style="background:#DCFCE7;color:#16a34a;"><i class="ti ti-map"></i> Area Layanan</span>
-                <h3><a href="iconnet-solo/index.html">ICONNET Solo & Surakarta — WiFi PLN Fiber untuk Warga Solo Raya</a></h3>
-                <p>Panduan lengkap ICONNET di Solo, Karanganyar, Sukoharjo, Klaten, dan Boyolali. Cek ketersediaan jaringan dan info harga terbaru untuk Solo Raya.</p>
-                <div class="card-footer-meta">
-                  <span><i class="ti ti-calendar"></i> 30 Mei 2026 · 5 mnt baca</span>
-                  <a href="iconnet-solo/index.html" class="read-more">Baca <i class="ti ti-arrow-right"></i></a>
-                </div>
-              </div>
-            </article>
-
-            <article class="article-card">
-              <div class="card-img-wrap bg-purple">
-                <i class="ti ti-device-tv"></i>
-              </div>
-              <div class="card-body">
-                <span class="card-tag"><i class="ti ti-bulb"></i> Tips & Trik</span>
-                <h3><a href="internet-lemot/index.html">Internet Lemot Padahal Sudah Fiber Optik? Ini 7 Penyebab dan Cara Mengatasinya</a></h3>
-                <p>Kecepatan internet fiber optik bisa terganggu karena berbagai faktor di dalam rumah. Kenali penyebabnya dan cara memperbaikinya sendiri.</p>
-                <div class="card-footer-meta">
-                  <span><i class="ti ti-calendar"></i> 28 Mei 2026 · 7 mnt baca</span>
-                  <a href="internet-lemot/index.html" class="read-more">Baca <i class="ti ti-arrow-right"></i></a>
-                </div>
-              </div>
-            </article>
-
-            <article class="article-card">
-              <div class="card-img-wrap bg-rose">
-                <i class="ti ti-building-store"></i>
-              </div>
-              <div class="card-body">
-                <span class="card-tag" style="background:#FEE2E2;color:#B91C1C;"><i class="ti ti-briefcase"></i> Bisnis</span>
-                <h3><a href="iconnet-biz-jateng/index.html">ICONNET BIZ Jawa Tengah — Paket Internet Khusus Usaha & UMKM</a></h3>
-                <p>ICONNET BIZ hadir untuk kebutuhan bisnis di Jawa Tengah. Kecepatan hingga 250 Mbps, uptime 99.9%, dan support prioritas untuk kelancaran usahamu.</p>
-                <div class="card-footer-meta">
-                  <span><i class="ti ti-calendar"></i> 25 Mei 2026 · 6 mnt baca</span>
-                  <a href="iconnet-biz-jateng/index.html" class="read-more">Baca <i class="ti ti-arrow-right"></i></a>
-                </div>
-              </div>
-            </article>
-
-            <article class="article-card">
-              <div class="card-img-wrap bg-blue-1">
-                <i class="ti ti-map-pin"></i>
-              </div>
-              <div class="card-body">
-                <span class="card-tag" style="background:#DCFCE7;color:#16a34a;"><i class="ti ti-map"></i> Area Layanan</span>
-                <h3><a href="iconnet-purwokerto/index.html">ICONNET Purwokerto & Banyumas — Internet PLN untuk Kawasan Banyumasan</a></h3>
-                <p>Info coverage ICONNET di Purwokerto, Cilacap, Kebumen, Purbalingga, dan Banjarnegara. Daftar online, teknisi siap datang ke lokasi kamu.</p>
-                <div class="card-footer-meta">
-                  <span><i class="ti ti-calendar"></i> 22 Mei 2026 · 4 mnt baca</span>
-                  <a href="iconnet-purwokerto/index.html" class="read-more">Baca <i class="ti ti-arrow-right"></i></a>
-                </div>
-              </div>
-            </article>
-
-          </div>
-
-          <!-- PAGINATION -->
-          <div class="pagination">
-            <a href="#" class="page-btn active">1</a>
-            <a href="#" class="page-btn">2</a>
-            <a href="#" class="page-btn">3</a>
-            <a href="#" class="page-btn"><i class="ti ti-chevron-right"></i></a>
-          </div>
-
-        </main>
-
-        <!-- ===== SIDEBAR ===== -->
-        <aside class="sidebar">
-
-          <!-- CTA WA -->
-          <div class="sidebar-card sidebar-cta">
-            <h3><i class="ti ti-brand-whatsapp" style="color:#25D366;"></i> Mau Daftar ICONNET?</h3>
-            <p>Chat tim kami sekarang — konsultasi gratis, proses cepat, teknisi datang ke rumah kamu!</p>
-            <a href="https://wa.me/6281339646353?text=Halo+ICONNET%2C+saya+mau+tanya+paket+internet" class="btn-wa-sidebar" target="_blank" rel="noopener">
-              <i class="ti ti-brand-whatsapp"></i> Chat WhatsApp Sekarang
-            </a>
-          </div>
-
-          <!-- PROMO AKTIF -->
-          <div class="sidebar-card">
-            <h3><i class="ti ti-gift"></i> Promo Aktif Saat Ini</h3>
-            <div class="promo-sidebar-badge">
-              <p>🎉 Gratis Biaya Pemasangan</p>
-              <span>Berlaku untuk semua paket, s/d 15 Juni 2026</span>
-            </div>
-            <a href="https://wa.me/6281339646353?text=Halo+ICONNET%2C+saya+mau+klaim+promo+gratis+pemasangan" class="btn-baca" style="width:100%;justify-content:center;box-sizing:border-box;" target="_blank" rel="noopener">
-              Klaim Promo Sekarang <i class="ti ti-arrow-right"></i>
-            </a>
-          </div>
-
-          <!-- ARTIKEL POPULER -->
-          <div class="sidebar-card">
-            <h3><i class="ti ti-flame"></i> Artikel Terpopuler</h3>
-            <div class="popular-list">
-              <a href="harga-paket/index.html" class="popular-item">
-                <div class="popular-num">1</div>
-                <div>
-                  <div class="popular-title">Harga Paket ICONNET Jateng Terbaru 2026</div>
-                  <span class="popular-date">4 Juni 2026</span>
-                </div>
-              </a>
-              <a href="cara-daftar/index.html" class="popular-item">
-                <div class="popular-num">2</div>
-                <div>
-                  <div class="popular-title">Cara Daftar ICONNET Online — Tanpa ke Kantor</div>
-                  <span class="popular-date">3 Juni 2026</span>
-                </div>
-              </a>
-              <a href="iconnet-semarang/index.html" class="popular-item">
-                <div class="popular-num">3</div>
-                <div>
-                  <div class="popular-title">ICONNET Semarang — Coverage & Harga</div>
-                  <span class="popular-date">2 Juni 2026</span>
-                </div>
-              </a>
-              <a href="#" class="popular-item">
-                <div class="popular-num">4</div>
-                <div>
-                  <div class="popular-title">5 Tips Pilih Paket Internet Rumah yang Tepat</div>
-                  <span class="popular-date">1 Juni 2026</span>
-                </div>
-              </a>
-              <a href="iconnet-solo/index.html" class="popular-item">
-                <div class="popular-num">5</div>
-                <div>
-                  <div class="popular-title">ICONNET Solo & Surakarta — Info Lengkap</div>
-                  <span class="popular-date">30 Mei 2026</span>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <!-- KATEGORI -->
-          <div class="sidebar-card">
-            <h3><i class="ti ti-tag"></i> Kategori Artikel</h3>
-            <div class="kat-sidebar-list">
-              <a href="#" class="kat-sidebar-item">
-                <span><i class="ti ti-notes" style="margin-right:6px;"></i> Semua Artikel</span>
-                <span class="kat-count">14</span>
-              </a>
-              <a href="#" class="kat-sidebar-item">
-                <span><i class="ti ti-package" style="margin-right:6px;"></i> Info Paket</span>
-                <span class="kat-count">4</span>
-              </a>
-              <a href="#" class="kat-sidebar-item">
-                <span><i class="ti ti-bulb" style="margin-right:6px;"></i> Tips & Trik</span>
-                <span class="kat-count">3</span>
-              </a>
-              <a href="#" class="kat-sidebar-item">
-                <span><i class="ti ti-map-pin" style="margin-right:6px;"></i> Area Layanan</span>
-                <span class="kat-count">5</span>
-              </a>
-              <a href="#" class="kat-sidebar-item">
-                <span><i class="ti ti-gift" style="margin-right:6px;"></i> Promo</span>
-                <span class="kat-count">2</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- NEWSLETTER -->
-          <div class="sidebar-card">
-            <h3><i class="ti ti-mail"></i> Notifikasi Promo Terbaru</h3>
-            <p style="font-size:13px;color:var(--blog-muted);margin-bottom:14px;line-height:1.6;">Daftarkan WhatsApp-mu dan dapatkan info promo ICONNET terbaru langsung di HP-mu.</p>
-            <div class="newsletter-form">
-              <input type="text" placeholder="Nama kamu" />
-              <input type="tel" placeholder="Nomor WhatsApp (cth: 08123...)" />
-              <button onclick="window.open('https://wa.me/6281339646353?text=Halo+ICONNET%2C+saya+mau+daftar+notifikasi+promo','_blank')">
-                <i class="ti ti-send"></i> Daftar Sekarang
-              </button>
-            </div>
-          </div>
-
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER (sama persis dengan index.html) ===== -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="logo">
-            <img src="../images/iconnet white.png" alt="ICONNET Jawa Tengah — WiFi PLN" height="36" width="auto" loading="lazy" />
-          </div>
-          <p>Internet fiber optic rumah cepat &amp; stabil dari jaringan resmi PLN. Melayani seluruh Jawa Tengah &amp; Yogyakarta — mulai Rp160.000/bulan.</p>
-          <div class="footer-sosmed">
-            <a href="#" aria-label="Instagram ICONNET"><i class="ti ti-brand-instagram"></i></a>
-            <a href="#" aria-label="Facebook ICONNET"><i class="ti ti-brand-facebook"></i></a>
-            <a href="#" aria-label="YouTube ICONNET"><i class="ti ti-brand-youtube"></i></a>
-          </div>
-        </div>
-        <div class="footer-links">
-          <h4>Navigasi</h4>
-          <a href="../index.html#keunggulan">Keunggulan ICONNET</a>
-          <a href="../index.html#paket">Paket &amp; Harga</a>
-          <a href="../index.html#cara-daftar">Cara Daftar</a>
-          <a href="../index.html#faq">FAQ</a>
-          <a href="../index.html#coverage">Coverage Area</a>
-          <a href="index.html">Blog</a>
-        </div>
-        <div class="footer-links">
-          <h4>Artikel Blog</h4>
-          <a href="harga-paket/index.html">Harga Paket 2026</a>
-          <a href="cara-daftar/index.html">Cara Daftar</a>
-          <a href="iconnet-semarang/index.html">ICONNET Semarang</a>
-          <a href="iconnet-solo/index.html">ICONNET Solo</a>
-          <a href="iconnet-purwokerto/index.html">ICONNET Purwokerto</a>
-          <!-- <a href="iconnet-magelang/index.html">ICONNET Magelang</a> -->
-        </div>
-        <div class="footer-contact">
-          <h4>Hubungi Kami</h4>
-          <a href="https://wa.me/6281339646353" target="_blank" rel="noopener">
-            <i class="ti ti-brand-whatsapp"></i>
-            +62 813-3964-6353
-          </a>
-          <p class="footer-jam"><i class="ti ti-clock"></i> Online Service <br>Senin–Sabtu, 08.00–22.00 WIB</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 jatengwifipln.com — Mitra Pemasaran ICONNET PLN, Jawa Tengah &amp; Yogyakarta. Website ini dikelola oleh mitra pemasaran ICONNET, bukan website resmi PT PLN (Persero).</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Floating WA Button -->
-  <a href="https://wa.me/6281339646353?text=Halo+ICONNET%2C+saya+mau+tanya+paket+internet" class="wa-float" target="_blank" rel="noopener" aria-label="Chat WhatsApp ICONNET Jawa Tengah">
-    <i class="ti ti-brand-whatsapp"></i>
-  </a>
-
-  <script src="../js/main.js" defer></script>
-  <script>
-    // Hamburger menu
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    if (hamburger && navLinks) {
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-      });
-    }
-
-    // Navbar scroll effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 40) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Blog ICONNET Jawa Tengah — Tips Internet, Info Paket & Update Terbaru
+    </title>
+    <meta
+      name="description"
+      content="Blog resmi ICONNET Jawa Tengah. Baca artikel terbaru seputar internet fiber optic, tips WiFi rumah, info paket terbaru, dan panduan daftar ICONNET PLN."
+    />
+    <meta
+      name="keywords"
+      content="blog ICONNET Jawa Tengah, tips internet rumah, paket ICONNET terbaru, cara daftar ICONNET, wifi PLN Jateng"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.jatengwifipln.com/blog/" />
+
+    <meta
+      property="og:title"
+      content="Blog ICONNET Jawa Tengah — Tips Internet & Info Paket Terbaru"
+    />
+    <meta
+      property="og:description"
+      content="Baca artikel terbaru seputar internet fiber optic, tips WiFi rumah, info paket ICONNET, dan panduan berlangganan di Jawa Tengah."
+    />
+    <meta property="og:url" content="https://www.jatengwifipln.com/blog/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="id_ID" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Beranda",
+            "item": "https://www.jatengwifipln.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.jatengwifipln.com/blog/"
+          }
+        ]
       }
-    });
+    </script>
 
-    // Kategori filter
-    document.querySelectorAll('.kat-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.kat-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/png" href="../images/faveicon.jpg" />
+
+    <style>
+      /* ===== BLOG-SPECIFIC STYLES ===== */
+      :root {
+        --blog-accent: #0057d9;
+        --blog-bg: #f5f6fa;
+        --blog-card-bg: #ffffff;
+        --blog-border: #e4e6f0;
+        --blog-muted: #6b7280;
+        --blog-tag-bg: #eef3ff;
+        --blog-tag-color: #0057d9;
+      }
+
+      /* HERO BLOG */
+      .blog-hero {
+        background: linear-gradient(
+          135deg,
+          #001f6b 0%,
+          #003da5 50%,
+          #0057d9 100%
+        );
+        padding: 72px 0 80px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .blog-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse at 20% 50%,
+            rgba(255, 210, 0, 0.12) 0%,
+            transparent 55%
+          ),
+          radial-gradient(
+            ellipse at 80% 20%,
+            rgba(0, 153, 255, 0.15) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+      }
+
+      .blog-hero .container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .blog-hero-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 13px;
+        font-weight: 600;
+        padding: 6px 16px;
+        border-radius: 100px;
+        margin-bottom: 20px;
+        letter-spacing: 0.3px;
+      }
+
+      .blog-hero h1 {
+        font-size: clamp(26px, 4.5vw, 42px);
+        font-weight: 700;
+        color: #fff;
+        line-height: 1.25;
+        margin-bottom: 14px;
+      }
+
+      .blog-hero h1 span {
+        color: #ffd200;
+      }
+
+      .blog-hero p {
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 16px;
+        max-width: 540px;
+        margin: 0 auto 32px;
+        line-height: 1.7;
+      }
+
+      .blog-search-wrap {
+        max-width: 480px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .blog-search-wrap input {
+        width: 100%;
+        padding: 14px 52px 14px 20px;
+        border-radius: 100px;
+        border: none;
+        font-size: 15px;
+        font-family: inherit;
+        outline: none;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+        color: #1a1d2e;
+      }
+
+      .blog-search-wrap .search-icon {
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--blog-accent);
+        font-size: 20px;
+        pointer-events: none;
+      }
+
+      /* BREADCRUMB */
+      .breadcrumb {
+        padding: 14px 0;
+        border-bottom: 1px solid var(--blog-border);
+        background: #fff;
+      }
+
+      .breadcrumb-inner {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: var(--blog-muted);
+      }
+
+      .breadcrumb-inner a {
+        color: var(--blog-accent);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .breadcrumb-inner a:hover {
+        text-decoration: underline;
+      }
+
+      .breadcrumb-inner i {
+        font-size: 14px;
+      }
+
+      /* LAYOUT BLOG */
+      .blog-layout {
+        padding: 52px 0 72px;
+        background: var(--blog-bg);
+      }
+
+      .blog-grid-wrap {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 36px;
+        align-items: start;
+      }
+
+      /* KATEGORI FILTER */
+      .kategori-filter {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 32px;
+      }
+
+      .kat-btn {
+        padding: 7px 18px;
+        border-radius: 100px;
+        border: 1.5px solid var(--blog-border);
+        background: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--blog-muted);
+        cursor: pointer;
+        transition: all 0.18s;
+        font-family: inherit;
+      }
+
+      .kat-btn:hover,
+      .kat-btn.active {
+        background: var(--blog-accent);
+        border-color: var(--blog-accent);
+        color: #fff;
+      }
+
+      /* FEATURED ARTICLE */
+      .article-featured {
+        background: var(--blog-card-bg);
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid var(--blog-border);
+        margin-bottom: 28px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        transition:
+          box-shadow 0.2s,
+          transform 0.2s;
+      }
+
+      .article-featured:hover {
+        box-shadow: 0 12px 36px rgba(0, 61, 165, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .article-featured .feat-img {
+        background: linear-gradient(
+          135deg,
+          #003da5 0%,
+          #0057d9 60%,
+          #0099ff 100%
+        );
+        min-height: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .article-featured .feat-img::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 30% 70%,
+          rgba(255, 210, 0, 0.2) 0%,
+          transparent 60%
+        );
+      }
+
+      .feat-img-icon {
+        font-size: 72px;
+        color: rgba(255, 255, 255, 0.25);
+        position: relative;
+        z-index: 1;
+      }
+
+      .article-featured .feat-body {
+        padding: 32px 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .feat-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: #fef9e0;
+        color: #b45309;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 4px 12px;
+        border-radius: 100px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        width: fit-content;
+        margin-bottom: 14px;
+      }
+
+      .article-featured h2 {
+        font-size: clamp(17px, 2.5vw, 22px);
+        font-weight: 700;
+        color: #1a1d2e;
+        line-height: 1.4;
+        margin-bottom: 12px;
+      }
+
+      .article-featured h2 a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .article-featured h2 a:hover {
+        color: var(--blog-accent);
+      }
+
+      .article-excerpt {
+        font-size: 14px;
+        color: var(--blog-muted);
+        line-height: 1.7;
+        margin-bottom: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .article-meta {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 12px;
+        color: #9ca3af;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+
+      .article-meta span {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .btn-baca {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--blog-accent);
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 10px 22px;
+        border-radius: 100px;
+        text-decoration: none;
+        width: fit-content;
+        transition:
+          background 0.18s,
+          transform 0.18s;
+      }
+
+      .btn-baca:hover {
+        background: #003da5;
+        transform: translateX(2px);
+      }
+
+      /* ARTICLE GRID */
+      .articles-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .article-card {
+        background: var(--blog-card-bg);
+        border-radius: 16px;
+        border: 1px solid var(--blog-border);
+        overflow: hidden;
+        transition:
+          box-shadow 0.2s,
+          transform 0.2s;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .article-card:hover {
+        box-shadow: 0 8px 28px rgba(0, 61, 165, 0.09);
+        transform: translateY(-3px);
+      }
+
+      .card-img-wrap {
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        color: rgba(255, 255, 255, 0.3);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card-img-wrap::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 30% 70%,
+          rgba(255, 210, 0, 0.15) 0%,
+          transparent 60%
+        );
+        pointer-events: none;
+      }
+
+      .bg-blue-1 {
+        background: linear-gradient(135deg, #003da5, #0099ff);
+      }
+      .bg-blue-2 {
+        background: linear-gradient(135deg, #0057d9, #00c2ff);
+      }
+      .bg-green {
+        background: linear-gradient(135deg, #15803d, #16a34a);
+      }
+      .bg-indigo {
+        background: linear-gradient(135deg, #4338ca, #6366f1);
+      }
+      .bg-orange {
+        background: linear-gradient(135deg, #c2410c, #ea580c);
+      }
+      .bg-teal {
+        background: linear-gradient(135deg, #0d9488, #14b8a6);
+      }
+      .bg-purple {
+        background: linear-gradient(135deg, #7c3aed, #a855f7);
+      }
+      .bg-rose {
+        background: linear-gradient(135deg, #be123c, #f43f5e);
+      }
+
+      .card-body {
+        padding: 20px 18px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        background: var(--blog-tag-bg);
+        color: var(--blog-tag-color);
+        font-size: 11px;
+        font-weight: 700;
+        padding: 3px 10px;
+        border-radius: 100px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        width: fit-content;
+      }
+
+      .card-body h3 {
+        font-size: 15px;
+        font-weight: 700;
+        color: #1a1d2e;
+        line-height: 1.45;
+        margin-bottom: 8px;
+      }
+
+      .card-body h3 a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .card-body h3 a:hover {
+        color: var(--blog-accent);
+      }
+
+      .card-body p {
+        font-size: 13px;
+        color: var(--blog-muted);
+        line-height: 1.65;
+        flex: 1;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 14px;
+      }
+
+      .card-footer-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 11px;
+        color: #9ca3af;
+        padding-top: 12px;
+        border-top: 1px solid var(--blog-border);
+      }
+
+      .card-footer-meta .read-more {
+        color: var(--blog-accent);
+        font-weight: 700;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+      }
+
+      .card-footer-meta .read-more:hover {
+        text-decoration: underline;
+      }
+
+      /* PAGINATION */
+      .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 40px;
+      }
+
+      .page-btn {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        border: 1.5px solid var(--blog-border);
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--blog-muted);
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.18s;
+      }
+
+      .page-btn:hover,
+      .page-btn.active {
+        background: var(--blog-accent);
+        border-color: var(--blog-accent);
+        color: #fff;
+      }
+
+      /* ===== SIDEBAR ===== */
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .sidebar-card {
+        background: var(--blog-card-bg);
+        border-radius: 16px;
+        border: 1px solid var(--blog-border);
+        padding: 22px 20px;
+      }
+
+      .sidebar-card h3 {
+        font-size: 14px;
+        font-weight: 700;
+        color: #1a1d2e;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .sidebar-card h3 i {
+        color: var(--blog-accent);
+        font-size: 18px;
+      }
+
+      /* CTA SIDEBAR */
+      .sidebar-cta {
+        background: linear-gradient(135deg, #003da5 0%, #0057d9 100%);
+        border: none;
+        color: #fff;
+        text-align: center;
+      }
+
+      .sidebar-cta h3 {
+        color: #fff;
+        justify-content: center;
+      }
+
+      .sidebar-cta p {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.85);
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+
+      .sidebar-cta .btn-wa-sidebar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: #25d366;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 11px 20px;
+        border-radius: 100px;
+        text-decoration: none;
+        transition: background 0.18s;
+      }
+
+      .sidebar-cta .btn-wa-sidebar:hover {
+        background: #1eb358;
+      }
+
+      /* PROMO SIDEBAR */
+      .promo-sidebar-badge {
+        background: #fef9e0;
+        border: 1.5px solid #fcd34d;
+        border-radius: 12px;
+        padding: 14px 16px;
+        margin-bottom: 14px;
+      }
+
+      .promo-sidebar-badge p {
+        font-size: 13px;
+        color: #92400e;
+        font-weight: 600;
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      .promo-sidebar-badge span {
+        font-size: 11px;
+        color: #b45309;
+        display: block;
+        margin-top: 4px;
+      }
+
+      /* ARTIKEL POPULER SIDEBAR */
+      .popular-list {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .popular-item {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .popular-item:hover .popular-title {
+        color: var(--blog-accent);
+      }
+
+      .popular-num {
+        min-width: 28px;
+        height: 28px;
+        background: var(--blog-tag-bg);
+        color: var(--blog-accent);
+        font-size: 12px;
+        font-weight: 800;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+
+      .popular-title {
+        font-size: 13px;
+        font-weight: 600;
+        color: #1a1d2e;
+        line-height: 1.45;
+        transition: color 0.15s;
+      }
+
+      .popular-date {
+        font-size: 11px;
+        color: #9ca3af;
+        margin-top: 3px;
+        display: block;
+      }
+
+      /* KATEGORI SIDEBAR */
+      .kat-sidebar-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .kat-sidebar-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 9px 12px;
+        border-radius: 10px;
+        background: var(--blog-bg);
+        text-decoration: none;
+        color: #374151;
+        font-size: 13px;
+        font-weight: 500;
+        transition:
+          background 0.15s,
+          color 0.15s;
+      }
+
+      .kat-sidebar-item:hover {
+        background: var(--blog-tag-bg);
+        color: var(--blog-accent);
+      }
+
+      .kat-sidebar-item .kat-count {
+        background: var(--blog-border);
+        color: var(--blog-muted);
+        font-size: 11px;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 100px;
+      }
+
+      /* NEWSLETTER */
+      .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .newsletter-form input {
+        padding: 10px 14px;
+        border-radius: 10px;
+        border: 1.5px solid var(--blog-border);
+        font-size: 13px;
+        font-family: inherit;
+        outline: none;
+        transition: border-color 0.18s;
+      }
+
+      .newsletter-form input:focus {
+        border-color: var(--blog-accent);
+      }
+
+      .newsletter-form button {
+        padding: 11px;
+        border-radius: 10px;
+        background: var(--blog-accent);
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+        transition: background 0.18s;
+      }
+
+      .newsletter-form button:hover {
+        background: #003da5;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 900px) {
+        .blog-grid-wrap {
+          grid-template-columns: 1fr;
+        }
+        .sidebar {
+          display: none;
+        }
+        .article-featured {
+          grid-template-columns: 1fr;
+        }
+        .article-featured .feat-img {
+          min-height: 180px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .articles-grid {
+          grid-template-columns: 1fr;
+        }
+        .kategori-filter {
+          gap: 8px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ===== NAVBAR (sama persis dengan index.html) ===== -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-inner">
+        <a href="/" class="logo">
+          <img
+            src="../images/iconnet normal.png"
+            alt="ICONNET Jawa Tengah — WiFi PLN"
+            height="36"
+            width="auto"
+            loading="eager"
+          />
+        </a>
+        <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+          <a href="/#keunggulan">Keunggulan</a>
+          <a href="/#paket">Paket</a>
+          <a href="/#cara-daftar">Cara Daftar</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/#coverage">Area Layanan</a>
+          <a href="/blog/index.html" class="active">Blog</a>
+        </nav>
+        <a
+          href="https://wa.me/6281339646353?text=Halo+ICONNET%2C+saya+ingin+tanya+paket+internet"
+          class="btn-wa-nav"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="ti ti-brand-whatsapp"></i>
+          <span>Hubungi Kami</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Buka menu">
+          <i class="ti ti-menu-2"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== PROMO TICKER (sama dengan index.html) ===== -->
+    <style>
+      .promo-banner-ticker {
+        background: linear-gradient(90deg, #16a34a, #15803d);
+        color: #fff;
+        padding: 10px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        position: sticky;
+        top: 64px;
+        z-index: 99;
+      }
+      .promo-ticker-track {
+        display: inline-flex;
+        animation: ticker-scroll 28s linear infinite;
+      }
+      .promo-ticker-track:hover {
+        animation-play-state: paused;
+      }
+      .promo-ticker-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 0 48px;
+      }
+      .promo-ticker-item a {
+        color: #fff;
+        text-decoration: underline;
+      }
+      .promo-ticker-sep {
+        opacity: 0.5;
+        font-size: 18px;
+        padding: 0 8px;
+      }
+      @keyframes ticker-scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+
+    <!-- PROMO TICKER -->
+    <div class="promo-banner-ticker">
+      <div class="promo-ticker-track">
+        <span class="promo-ticker-item"
+          >🎁 &nbsp;<strong>PROMO BULAN SEPTEMBER 2026</strong> &nbsp;|&nbsp;
+          GRATIS Biaya Pemasangan untuk semua paket kecuali ICONNET BIZ!&nbsp;
+          <a
+            href="https://wa.me/6281339646353?text=Halo+ICONNET%2C+saya+mau+daftar+promo"
+            target="_blank"
+            rel="noopener"
+            >Daftar via WA →</a
+          ></span
+        >
+        <span class="promo-ticker-sep">✦</span>
+        <span class="promo-ticker-item"
+          >⚡ Internet Fiber PLN mulai <strong>Rp170ribuan/bulan</strong> —
+          Unlimited tanpa FUP</span
+        >
+        <span class="promo-ticker-sep">✦</span>
+        <span class="promo-ticker-item"
+          >📶 Tersedia di Semarang, Solo, Purwokerto, Magelang &amp; seluruh
+          Jawa Tengah</span
+        >
+        <span class="promo-ticker-sep">✦</span>
+        <span class="promo-ticker-item"
+          >🎁 &nbsp;<strong>PROMO BULAN SEPTEMBER 2026</strong> &nbsp;|&nbsp;
+          GRATIS Biaya Pemasangan untuk semua paket kecuali ICONNET BIZ!&nbsp;
+          <a
+            href="https://wa.me/6281339646353?text=Halo+ICONNET%2C+saya+mau+daftar+promo"
+            target="_blank"
+            rel="noopener"
+            >Daftar via WA →</a
+          ></span
+        >
+        <span class="promo-ticker-sep">✦</span>
+        <span class="promo-ticker-item"
+          >⚡ Internet Fiber PLN mulai <strong>Rp170ribuan/bulan</strong> —
+          Unlimited tanpa FUP</span
+        >
+        <span class="promo-ticker-sep">✦</span>
+        <span class="promo-ticker-item"
+          >📶 Tersedia di Semarang, Solo, Purwokerto, Magelang &amp; seluruh
+          Jawa Tengah</span
+        >
+        <span class="promo-ticker-sep">✦</span>
+      </div>
+    </div>
+
+    <!-- ===== BLOG HERO ===== -->
+    <section class="blog-hero">
+      <div class="container">
+        <span class="blog-hero-label"
+          ><i class="ti ti-news"></i> Layanan Informasi Terbaru ICONNET</span
+        >
+        <h1>Blog <span>ICONNET</span> Jawa Tengah</h1>
+        <p>
+          Temukan tips internet rumah, info paket terbaru, panduan daftar, dan
+          update seputar WiFi PLN fiber optik di Jawa Tengah.
+        </p>
+        <div class="blog-search-wrap">
+          <input
+            type="text"
+            placeholder="Cari artikel, tips, info paket..."
+            aria-label="Cari artikel blog"
+          />
+          <i class="ti ti-search search-icon"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <div class="breadcrumb">
+      <div class="container breadcrumb-inner">
+        <a href="/"><i class="ti ti-home"></i> Beranda</a>
+        <i class="ti ti-chevron-right"></i>
+        <span>Blog</span>
+      </div>
+    </div>
+
+    <!-- ===== MAIN BLOG LAYOUT ===== -->
+    <section class="blog-layout">
+      <div class="container">
+        <div class="blog-grid-wrap">
+          <!-- ===== KONTEN UTAMA ===== -->
+          <main>
+            <!-- FILTER KATEGORI -->
+            <div class="kategori-filter">
+              <button class="kat-btn active">Semua</button>
+              <button class="kat-btn">Info Paket</button>
+              <button class="kat-btn">Tips & Trik</button>
+              <button class="kat-btn">Area Layanan</button>
+              <button class="kat-btn">Cara Daftar</button>
+              <button class="kat-btn">Promo</button>
+            </div>
+
+            <!-- ARTIKEL FEATURED -->
+            <article class="article-featured">
+              <div class="feat-img">
+                <i class="ti ti-wifi feat-img-icon"></i>
+              </div>
+              <div class="feat-body">
+                <div class="feat-badge">
+                  <i class="ti ti-star"></i> Artikel Unggulan
+                </div>
+                <h2>
+                  <a href="harga-paket/index.html"
+                    >Harga Paket ICONNET Jawa Tengah Terbaru 2026 — Lengkap
+                    dengan Cara Daftar Mudah & Cepat</a
+                  >
+                </h2>
+                <div class="article-meta">
+                  <span><i class="ti ti-calendar"></i> 4 Juni 2026</span>
+                  <span><i class="ti ti-clock"></i> 6 menit baca</span>
+                  <span><i class="ti ti-tag"></i> Info Paket</span>
+                </div>
+                <p class="article-excerpt">
+                  Mau pasang internet ICONNET di Jawa Tengah tapi bingung soal
+                  harga? Di artikel ini kami rangkum lengkap semua pilihan paket
+                  — mulai dari Reguler, Promo, Bundling 6 & 12 bulan, hingga
+                  paket Bisnis — lengkap dengan harga terbaru 2026 dan promo
+                  gratis pemasangan yang sedang berjalan.
+                </p>
+                <a href="harga-paket/index.html" class="btn-baca">
+                  Baca Selengkapnya <i class="ti ti-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- GRID ARTIKEL -->
+            <div class="articles-grid">
+              <article class="article-card">
+                <div class="card-img-wrap bg-blue-2">
+                  <i class="ti ti-list-check"></i>
+                </div>
+                <div class="card-body">
+                  <span class="card-tag"
+                    ><i class="ti ti-notes"></i> Cara Daftar</span
+                  >
+                  <h3>
+                    <a href="cara-daftar/index.html"
+                      >Cara Daftar ICONNET Online di Jawa Tengah — Mudah Tanpa
+                      Harus ke Kantor</a
+                    >
+                  </h3>
+                  <p>
+                    Langkah demi langkah cara mendaftar ICONNET dari rumah via
+                    WhatsApp. Mulai dari cek area, pilih paket, hingga teknisi
+                    datang ke rumahmu.
+                  </p>
+                  <div class="card-footer-meta">
+                    <span
+                      ><i class="ti ti-calendar"></i> 3 Juni 2026 · 4 mnt
+                      baca</span
+                    >
+                    <a href="cara-daftar/index.html" class="read-more"
+                      >Baca <i class="ti ti-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="article-card">
+                <div class="card-img-wrap bg-green">
+                  <i class="ti ti-map-pin"></i>
+                </div>
+                <div class="card-body">
+                  <span
+                    class="card-tag"
+                    style="background: #dcfce7; color: #16a34a"
+                    ><i class="ti ti-map"></i> Area Layanan</span
+                  >
+                  <h3>
+                    <a href="iconnet-semarang/index.html"
+                      >ICONNET Semarang — Internet Fiber PLN Cepat untuk Warga
+                      Kota & Sekitarnya</a
+                    >
+                  </h3>
+                  <p>
+                    Info lengkap ICONNET di Semarang, Ungaran, Demak, Mranggen
+                    dan sekitarnya. Cek coverage, harga paket, dan cara daftar
+                    khusus area Semarang.
+                  </p>
+                  <div class="card-footer-meta">
+                    <span
+                      ><i class="ti ti-calendar"></i> 2 Juni 2026 · 5 mnt
+                      baca</span
+                    >
+                    <a href="iconnet-semarang/index.html" class="read-more"
+                      >Baca <i class="ti ti-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="article-card">
+                <div class="card-img-wrap bg-indigo">
+                  <i class="ti ti-bolt"></i>
+                </div>
+                <div class="card-body">
+                  <span class="card-tag"
+                    ><i class="ti ti-bulb"></i> Tips & Trik</span
+                  >
+                  <h3>
+                    <a href="cara-pilih-wifi/index.html"
+                      >5 Tips Memilih Paket Internet Rumah yang Tepat Sesuai
+                      Kebutuhan Keluarga</a
+                    >
+                  </h3>
+                  <p>
+                    Bingung pilih paket 35, 50, atau 100 Mbps? Panduan lengkap
+                    menentukan paket internet yang sesuai jumlah pengguna dan
+                    aktivitas digitalmu.
+                  </p>
+                  <div class="card-footer-meta">
+                    <span
+                      ><i class="ti ti-calendar"></i> 1 Juni 2026 · 5 mnt
+                      baca</span
+                    >
+                    <a href="cara-pilih-wifi/index.html" class="read-more"
+                      >Baca <i class="ti ti-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="article-card">
+                <div class="card-img-wrap bg-orange">
+                  <i class="ti ti-gift"></i>
+                </div>
+                <div class="card-body">
+                  <span
+                    class="card-tag"
+                    style="background: #fef3c7; color: #b45309"
+                    ><i class="ti ti-tag"></i> Promo</span
+                  >
+                  <h3>
+                    <a href="promo-terbaru/index.html"
+                      >Promo ICONNET Juni 2026: Gratis Biaya Pemasangan Semua
+                      Paket — Berlaku s/d 15 Juni!</a
+                    >
+                  </h3>
+                  <p>
+                    Manfaatkan promo terbatas ini untuk pasang internet fiber
+                    optic PLN tanpa biaya instalasi. Cek syarat dan cara
+                    klaimnya di sini sebelum kehabisan.
+                  </p>
+                  <div class="card-footer-meta">
+                    <span
+                      ><i class="ti ti-calendar"></i> 1 Juni 2026 · 3 mnt
+                      baca</span
+                    >
+                    <a href="promo-terbaru/index.html" class="read-more"
+                      >Baca <i class="ti ti-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="article-card">
+                <div class="card-img-wrap bg-teal">
+                  <i class="ti ti-map-pin"></i>
+                </div>
+                <div class="card-body">
+                  <span
+                    class="card-tag"
+                    style="background: #dcfce7; color: #16a34a"
+                    ><i class="ti ti-map"></i> Area Layanan</span
+                  >
+                  <h3>
+                    <a href="iconnet-solo/index.html"
+                      >ICONNET Solo & Surakarta — WiFi PLN Fiber untuk Warga
+                      Solo Raya</a
+                    >
+                  </h3>
+                  <p>
+                    Panduan lengkap ICONNET di Solo, Karanganyar, Sukoharjo,
+                    Klaten, dan Boyolali. Cek ketersediaan jaringan dan info
+                    harga terbaru untuk Solo Raya.
+                  </p>
+                  <div class="card-footer-meta">
+                    <span
+                      ><i class="ti ti-calendar"></i> 30 Mei 2026 · 5 mnt
+                      baca</span
+                    >
+                    <a href="iconnet-solo/index.html" class="read-more"
+                      >Baca <i class="ti ti-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="article-card">
+                <div class="card-img-wrap bg-purple">
+                  <i class="ti ti-device-tv"></i>
+                </div>
+                <div class="card-body">
+                  <span class="card-tag"
+                    ><i class="ti ti-bulb"></i> Tips & Trik</span
+                  >
+                  <h3>
+                    <a href="internet-lemot/index.html"
+                      >Internet Lemot Padahal Sudah Fiber Optik? Ini 7 Penyebab
+                      dan Cara Mengatasinya</a
+                    >
+                  </h3>
+                  <p>
+                    Kecepatan internet fiber optik bisa terganggu karena
+                    berbagai faktor di dalam rumah. Kenali penyebabnya dan cara
+                    memperbaikinya sendiri.
+                  </p>
+                  <div class="card-footer-meta">
+                    <span
+                      ><i class="ti ti-calendar"></i> 28 Mei 2026 · 7 mnt
+                      baca</span
+                    >
+                    <a href="internet-lemot/index.html" class="read-more"
+                      >Baca <i class="ti ti-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="article-card">
+                <div class="card-img-wrap bg-rose">
+                  <i class="ti ti-building-store"></i>
+                </div>
+                <div class="card-body">
+                  <span
+                    class="card-tag"
+                    style="background: #fee2e2; color: #b91c1c"
+                    ><i class="ti ti-briefcase"></i> Bisnis</span
+                  >
+                  <h3>
+                    <a href="iconnet-biz-jateng/index.html"
+                      >ICONNET BIZ Jawa Tengah — Paket Internet Khusus Usaha &
+                      UMKM</a
+                    >
+                  </h3>
+                  <p>
+                    ICONNET BIZ hadir untuk kebutuhan bisnis di Jawa Tengah.
+                    Kecepatan hingga 250 Mbps, uptime 99.9%, dan support
+                    prioritas untuk kelancaran usahamu.
+                  </p>
+                  <div class="card-footer-meta">
+                    <span
+                      ><i class="ti ti-calendar"></i> 25 Mei 2026 · 6 mnt
+                      baca</span
+                    >
+                    <a href="iconnet-biz-jateng/index.html" class="read-more"
+                      >Baca <i class="ti ti-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="article-card">
+                <div class="card-img-wrap bg-blue-1">
+                  <i class="ti ti-map-pin"></i>
+                </div>
+                <div class="card-body">
+                  <span
+                    class="card-tag"
+                    style="background: #dcfce7; color: #16a34a"
+                    ><i class="ti ti-map"></i> Area Layanan</span
+                  >
+                  <h3>
+                    <a href="iconnet-purwokerto/index.html"
+                      >ICONNET Purwokerto & Banyumas — Internet PLN untuk
+                      Kawasan Banyumasan</a
+                    >
+                  </h3>
+                  <p>
+                    Info coverage ICONNET di Purwokerto, Cilacap, Kebumen,
+                    Purbalingga, dan Banjarnegara. Daftar online, teknisi siap
+                    datang ke lokasi kamu.
+                  </p>
+                  <div class="card-footer-meta">
+                    <span
+                      ><i class="ti ti-calendar"></i> 22 Mei 2026 · 4 mnt
+                      baca</span
+                    >
+                    <a href="iconnet-purwokerto/index.html" class="read-more"
+                      >Baca <i class="ti ti-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- PAGINATION -->
+            <div class="pagination">
+              <a href="#" class="page-btn active">1</a>
+              <a href="#" class="page-btn">2</a>
+              <a href="#" class="page-btn">3</a>
+              <a href="#" class="page-btn"
+                ><i class="ti ti-chevron-right"></i
+              ></a>
+            </div>
+          </main>
+
+          <!-- ===== SIDEBAR ===== -->
+          <aside class="sidebar">
+            <!-- CTA WA -->
+            <div class="sidebar-card sidebar-cta">
+              <h3>
+                <i class="ti ti-brand-whatsapp" style="color: #25d366"></i> Mau
+                Daftar ICONNET?
+              </h3>
+              <p>
+                Chat tim kami sekarang — konsultasi gratis, proses cepat,
+                teknisi datang ke rumah kamu!
+              </p>
+              <a
+                href="https://wa.me/6281339646353?text=Halo+ICONNET%2C+saya+mau+tanya+paket+internet"
+                class="btn-wa-sidebar"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="ti ti-brand-whatsapp"></i> Chat WhatsApp Sekarang
+              </a>
+            </div>
+
+            <!-- PROMO AKTIF -->
+            <div class="sidebar-card">
+              <h3><i class="ti ti-gift"></i> Promo Aktif Saat Ini</h3>
+              <div class="promo-sidebar-badge">
+                <p>🎉 Gratis Biaya Pemasangan</p>
+                <span>Berlaku untuk semua paket, s/d 15 Juni 2026</span>
+              </div>
+              <a
+                href="https://wa.me/6281339646353?text=Halo+ICONNET%2C+saya+mau+klaim+promo+gratis+pemasangan"
+                class="btn-baca"
+                style="
+                  width: 100%;
+                  justify-content: center;
+                  box-sizing: border-box;
+                "
+                target="_blank"
+                rel="noopener"
+              >
+                Klaim Promo Sekarang <i class="ti ti-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- ARTIKEL POPULER -->
+            <div class="sidebar-card">
+              <h3><i class="ti ti-flame"></i> Artikel Terpopuler</h3>
+              <div class="popular-list">
+                <a href="harga-paket/index.html" class="popular-item">
+                  <div class="popular-num">1</div>
+                  <div>
+                    <div class="popular-title">
+                      Harga Paket ICONNET Jateng Terbaru 2026
+                    </div>
+                    <span class="popular-date">4 Juni 2026</span>
+                  </div>
+                </a>
+                <a href="cara-daftar/index.html" class="popular-item">
+                  <div class="popular-num">2</div>
+                  <div>
+                    <div class="popular-title">
+                      Cara Daftar ICONNET Online — Tanpa ke Kantor
+                    </div>
+                    <span class="popular-date">3 Juni 2026</span>
+                  </div>
+                </a>
+                <a href="iconnet-semarang/index.html" class="popular-item">
+                  <div class="popular-num">3</div>
+                  <div>
+                    <div class="popular-title">
+                      ICONNET Semarang — Coverage & Harga
+                    </div>
+                    <span class="popular-date">2 Juni 2026</span>
+                  </div>
+                </a>
+                <a href="#" class="popular-item">
+                  <div class="popular-num">4</div>
+                  <div>
+                    <div class="popular-title">
+                      5 Tips Pilih Paket Internet Rumah yang Tepat
+                    </div>
+                    <span class="popular-date">1 Juni 2026</span>
+                  </div>
+                </a>
+                <a href="iconnet-solo/index.html" class="popular-item">
+                  <div class="popular-num">5</div>
+                  <div>
+                    <div class="popular-title">
+                      ICONNET Solo & Surakarta — Info Lengkap
+                    </div>
+                    <span class="popular-date">30 Mei 2026</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- KATEGORI -->
+            <div class="sidebar-card">
+              <h3><i class="ti ti-tag"></i> Kategori Artikel</h3>
+              <div class="kat-sidebar-list">
+                <a href="#" class="kat-sidebar-item">
+                  <span
+                    ><i class="ti ti-notes" style="margin-right: 6px"></i> Semua
+                    Artikel</span
+                  >
+                  <span class="kat-count">14</span>
+                </a>
+                <a href="#" class="kat-sidebar-item">
+                  <span
+                    ><i class="ti ti-package" style="margin-right: 6px"></i>
+                    Info Paket</span
+                  >
+                  <span class="kat-count">4</span>
+                </a>
+                <a href="#" class="kat-sidebar-item">
+                  <span
+                    ><i class="ti ti-bulb" style="margin-right: 6px"></i> Tips &
+                    Trik</span
+                  >
+                  <span class="kat-count">3</span>
+                </a>
+                <a href="#" class="kat-sidebar-item">
+                  <span
+                    ><i class="ti ti-map-pin" style="margin-right: 6px"></i>
+                    Area Layanan</span
+                  >
+                  <span class="kat-count">5</span>
+                </a>
+                <a href="#" class="kat-sidebar-item">
+                  <span
+                    ><i class="ti ti-gift" style="margin-right: 6px"></i>
+                    Promo</span
+                  >
+                  <span class="kat-count">2</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- NEWSLETTER -->
+            <div class="sidebar-card">
+              <h3><i class="ti ti-mail"></i> Notifikasi Promo Terbaru</h3>
+              <p
+                style="
+                  font-size: 13px;
+                  color: var(--blog-muted);
+                  margin-bottom: 14px;
+                  line-height: 1.6;
+                "
+              >
+                Daftarkan WhatsApp-mu dan dapatkan info promo ICONNET terbaru
+                langsung di HP-mu.
+              </p>
+              <div class="newsletter-form">
+                <input type="text" placeholder="Nama kamu" />
+                <input
+                  type="tel"
+                  placeholder="Nomor WhatsApp (cth: 08123...)"
+                />
+                <button
+                  onclick="
+                    window.open(
+                      'https://wa.me/6281339646353?text=Halo+ICONNET%2C+saya+mau+daftar+notifikasi+promo',
+                      '_blank',
+                    )
+                  "
+                >
+                  <i class="ti ti-send"></i> Daftar Sekarang
+                </button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER (sama persis dengan index.html) ===== -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="logo">
+              <img
+                src="../images/iconnet white.png"
+                alt="ICONNET Jawa Tengah — WiFi PLN"
+                height="36"
+                width="auto"
+                loading="lazy"
+              />
+            </div>
+            <p>
+              Internet fiber optic rumah cepat &amp; stabil dari jaringan resmi
+              PLN. Melayani seluruh Jawa Tengah &amp; Yogyakarta — mulai
+              Rp160.000/bulan.
+            </p>
+            <div class="footer-sosmed">
+              <a href="#" aria-label="Instagram ICONNET"
+                ><i class="ti ti-brand-instagram"></i
+              ></a>
+              <a href="#" aria-label="Facebook ICONNET"
+                ><i class="ti ti-brand-facebook"></i
+              ></a>
+              <a href="#" aria-label="YouTube ICONNET"
+                ><i class="ti ti-brand-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h4>Navigasi</h4>
+            <a href="../index.html#keunggulan">Keunggulan ICONNET</a>
+            <a href="../index.html#paket">Paket &amp; Harga</a>
+            <a href="../index.html#cara-daftar">Cara Daftar</a>
+            <a href="../index.html#faq">FAQ</a>
+            <a href="../index.html#coverage">Coverage Area</a>
+            <a href="index.html">Blog</a>
+          </div>
+          <div class="footer-links">
+            <h4>Artikel Blog</h4>
+            <a href="harga-paket/index.html">Harga Paket 2026</a>
+            <a href="cara-daftar/index.html">Cara Daftar</a>
+            <a href="iconnet-semarang/index.html">ICONNET Semarang</a>
+            <a href="iconnet-solo/index.html">ICONNET Solo</a>
+            <a href="iconnet-purwokerto/index.html">ICONNET Purwokerto</a>
+          </div>
+          <div class="footer-contact">
+            <h4>Hubungi Kami</h4>
+            <a
+              href="https://wa.me/6281339646353"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="ti ti-brand-whatsapp"></i>
+              +62 813-3964-6353
+            </a>
+            <p class="footer-jam">
+              <i class="ti ti-clock"></i> Online Service <br />Senin–Sabtu,
+              08.00–22.00 WIB
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 jatengwifipln.com — Mitra Pemasaran ICONNET PLN, Jawa
+            Tengah &amp; Yogyakarta. Website ini dikelola oleh mitra pemasaran
+            ICONNET, bukan website resmi PT PLN (Persero).
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WA Button -->
+    <a
+      href="https://wa.me/6281339646353?text=Halo+ICONNET%2C+saya+mau+tanya+paket+internet"
+      class="wa-float"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat WhatsApp ICONNET Jawa Tengah"
+    >
+      <i class="ti ti-brand-whatsapp"></i>
+    </a>
+
+    <script src="../js/main.js" defer></script>
+    <script>
+      // Hamburger menu
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      if (hamburger && navLinks) {
+        hamburger.addEventListener("click", () => {
+          navLinks.classList.toggle("open");
+        });
+      }
+
+      // Navbar scroll effect
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 40) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
       });
-    });
-  </script>
 
-</body>
+      // Kategori filter
+      document.querySelectorAll(".kat-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".kat-btn")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    </script>
+  </body>
 </html>
