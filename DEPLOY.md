@@ -5,11 +5,11 @@ Repo ini adalah **static site** (HTML/CSS/JS murni). Tidak ada langkah kompilasi
 
 ## Alur
 
-| Event | Yang terjadi |
-|---|---|
-| Pull request ke `main` | Hanya job `validate` (quality gate) |
-| Push / merge ke `main` | `validate` → `deploy` (upload via FTPS) |
-| Manual dari tab Actions | Sama seperti push ke `main` |
+| Event                   | Yang terjadi                            |
+| ----------------------- | --------------------------------------- |
+| Pull request ke `main`  | Hanya job `validate` (quality gate)     |
+| Push / merge ke `main`  | `validate` → `deploy` (upload via FTPS) |
+| Manual dari tab Actions | Sama seperti push ke `main`             |
 
 Workflow: `.github/workflows/deploy.yml`
 
@@ -31,12 +31,12 @@ Catat: hostname, username, password, dan direktori tujuan.
 Di repo GitHub → **Settings → Secrets and variables → Actions → New repository secret**.
 Buat empat secret berikut:
 
-| Secret | Contoh | Catatan |
-|---|---|---|
-| `FTP_SERVER` | `ftp.jatengwifipln.com` | Tanpa `ftp://`, tanpa trailing slash |
-| `FTP_USERNAME` | `deploy@jatengwifipln.com` | Sesuai akun FTP |
-| `FTP_PASSWORD` | `••••••••` | |
-| `FTP_SERVER_DIR` | `/public_html/` | **Wajib diakhiri `/`** |
+| Secret           | Contoh                     | Catatan                              |
+| ---------------- | -------------------------- | ------------------------------------ |
+| `FTP_SERVER`     | `ftp.jatengwifipln.com`    | Tanpa `ftp://`, tanpa trailing slash |
+| `FTP_USERNAME`   | `deploy@jatengwifipln.com` | Sesuai akun FTP                      |
+| `FTP_PASSWORD`   | `••••••••`                 |                                      |
+| `FTP_SERVER_DIR` | `/public_html/`            | **Wajib diakhiri `/`**               |
 
 `FTP_SERVER_DIR` opsional; jika dikosongkan, workflow memakai `./` (root akun FTP).
 Kalau akun FTP Anda di-root ke `public_html`, biarkan kosong pun aman.
@@ -68,8 +68,9 @@ Jika nanti ada file baru yang hanya untuk dev, tambahkan polanya ke blok `exclud
 - **Selalu cek dulu sebelum push ke `main`.** Push ke `main` langsung tayang ke produksi.
   Kalau ingin lebih aman, buat branch `staging` + FTP account terpisah dan duplikasi workflow
   dengan `on.push.branches: [staging]`.
-- **FTP over TLS.** Workflow memakai `protocol: ftps` bila didukung hosting. Kalau hosting
-  bermasalah dengan FTPS, ubah ke `protocol: ftp`.
+- **Protokol FTP.** Workflow memakai `protocol: ftp` karena koneksi FTPS Rumahweb memutus
+  transfer di tengah proses. FTP tidak mengenkripsi kredensial maupun data; bila Rumahweb
+  sudah mendukung FTPS secara stabil, ubah kembali ke `protocol: ftps`.
 - **Alternatif tanpa action pihak ketiga:** `lftp` sudah tersedia di runner GitHub dan bisa
   dipakai untuk `mirror -R`. Action `SamKirkland/FTP-Deploy-Action` dipilih karena menangani
   incremental sync + state, yang lebih efisien untuk site yang makin banyak halaman.
