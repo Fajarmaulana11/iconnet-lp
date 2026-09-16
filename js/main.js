@@ -356,12 +356,25 @@ Longitude: ${lng}`;
 window.addEventListener('scroll', () => {
 
   const navbar = document.getElementById('navbar');
+  const backToTop = document.getElementById('backToTop');
 
-  if (!navbar) return;
+  if (navbar) {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  }
 
-  navbar.classList.toggle('scrolled', window.scrollY > 20);
+  if (backToTop) {
+    backToTop.classList.toggle('show', window.scrollY > 420);
+  }
 
 });
+
+const backToTop = document.getElementById('backToTop');
+
+if (backToTop) {
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 // =========================
 // MOBILE MENU
