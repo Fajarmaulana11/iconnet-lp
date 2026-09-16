@@ -353,22 +353,22 @@ Longitude: ${lng}`;
 // =========================
 // NAVBAR SCROLL EFFECT
 // =========================
-window.addEventListener('scroll', () => {
+const backToTop = document.getElementById('backToTop');
 
+const updateScrollControls = () => {
   const navbar = document.getElementById('navbar');
-  const backToTop = document.getElementById('backToTop');
 
   if (navbar) {
     navbar.classList.toggle('scrolled', window.scrollY > 20);
   }
 
   if (backToTop) {
-    backToTop.classList.toggle('show', window.scrollY > 420);
+    backToTop.classList.toggle('show', window.scrollY > 160);
   }
+};
 
-});
-
-const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', updateScrollControls, { passive: true });
+updateScrollControls();
 
 if (backToTop) {
   backToTop.addEventListener('click', () => {

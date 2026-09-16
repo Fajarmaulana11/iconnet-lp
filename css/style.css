@@ -1822,6 +1822,10 @@ img, iframe { max-width: 100%; }
   transform: translateY(8px);
   transition: var(--transition);
 }
+.back-to-top:focus-visible {
+  outline: 3px solid #93C5FD;
+  outline-offset: 3px;
+}
 .back-to-top.show {
   opacity: 1;
   visibility: visible;
