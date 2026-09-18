@@ -1,0 +1,43 @@
+{
+  "site": {
+    "base_url": "https://www.jatengwifipln.com",
+    "brand": "ICONNET Jawa Tengah & Yogyakarta",
+    "phone": "6281339646353",
+    "price_start": "Rp 170.430/bulan",
+    "price_note": "Harga mengikuti informasi pada homepage dan perlu dikonfirmasi kembali saat pendaftaran."
+  },
+  "cities": [
+    {"slug":"iconnet-semarang","name":"Semarang","region":"Jawa Tengah","publish":true,"areas":["Semarang Tengah","Tembalang","Banyumanik","Pedurungan","Genuk","Gayamsari","Candisari","Gajahmungkur"],"local_note":"Halaman ini menggunakan daftar area yang sudah tercantum pada materi lokal project."},
+    {"slug":"iconnet-solo","name":"Solo / Surakarta","region":"Jawa Tengah","publish":true,"areas":["Laweyan","Serengan","Pasar Kliwon","Jebres","Banjarsari"],"local_note":"Halaman ini menggunakan daftar area yang sudah tercantum pada materi lokal project."},
+    {"slug":"iconnet-purwokerto","name":"Purwokerto","region":"Jawa Tengah","publish":true,"areas":["Purwokerto Utara","Purwokerto Selatan","Purwokerto Timur","Purwokerto Barat","Sokaraja"],"local_note":"Halaman ini menggunakan daftar area yang sudah tercantum pada materi lokal project."},
+    {"slug":"iconnet-magelang","name":"Magelang","region":"Jawa Tengah","publish":true,"areas":["Magelang Tengah","Magelang Utara","Magelang Selatan","Mungkid","Mertoyudan"],"local_note":"Halaman ini menggunakan daftar area yang sudah tercantum pada materi lokal project."},
+    {"slug":"iconnet-tegal","name":"Tegal","region":"Jawa Tengah","publish":true,"areas":["Tegal Barat","Tegal Timur","Tegal Selatan","Margadana","Slawi","Brebes"],"local_note":"Halaman ini menggunakan daftar area yang sudah tercantum pada materi lokal project."},
+    {"slug":"iconnet-kudus","name":"Kudus","region":"Jawa Tengah","publish":true,"areas":["Kota Kudus","Kaliwungu","Gebog","Jekulo","Bae"],"local_note":"Halaman ini menggunakan daftar area yang sudah tercantum pada materi lokal project."},
+    {"slug":"iconnet-cilacap","name":"Cilacap","region":"Jawa Tengah","publish":true,"areas":["Cilacap Tengah","Cilacap Selatan","Cilacap Utara","Jeruklegi","Kesugihan"],"local_note":"Halaman ini menggunakan daftar area yang sudah tercantum pada materi lokal project."},
+    {"slug":"iconnet-purworejo","name":"Purworejo","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-salatiga","name":"Salatiga","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-demak","name":"Demak","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-kendal","name":"Kendal","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-jepara","name":"Jepara","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-banyumas","name":"Banyumas","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-purbalingga","name":"Purbalingga","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-kebumen","name":"Kebumen","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-klaten","name":"Klaten","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-boyolali","name":"Boyolali","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-sragen","name":"Sragen","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-karanganyar","name":"Karanganyar","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-sukoharjo","name":"Sukoharjo","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-wonogiri","name":"Wonogiri","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-wonosobo","name":"Wonosobo","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-temanggung","name":"Temanggung","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-batang","name":"Batang","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-pekalongan","name":"Pekalongan","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-pemalang","name":"Pemalang","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-brebes","name":"Brebes","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-yogyakarta","name":"Yogyakarta","region":"Daerah Istimewa Yogyakarta","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-sleman","name":"Sleman","region":"Daerah Istimewa Yogyakarta","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-bantul","name":"Bantul","region":"Daerah Istimewa Yogyakarta","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-kulon-progo","name":"Kulon Progo","region":"Daerah Istimewa Yogyakarta","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-gunungkidul","name":"Gunungkidul","region":"Daerah Istimewa Yogyakarta","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."}
+  ]
+}
