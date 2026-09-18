@@ -87,10 +87,24 @@ def main() -> int:
     sitemap_urls = [node.text for node in root.findall(f"{namespace}url/{namespace}loc") if node.text]
     if len(sitemap_urls) < 10:
         errors.append("sitemap.xml contains fewer than 10 URLs")
+    if len(sitemap_urls) != len(set(sitemap_urls)):
+        errors.append("sitemap.xml contains duplicate URLs")
+
+    robots_text = (ROOT / "robots.txt").read_text(encoding="utf-8", errors="strict")
+    if re.search(r"(?im)^\s*Disallow:\s*/\s*$", robots_text):
+        errors.append("robots.txt blocks the entire site")
+    if not re.search(r"(?im)^\s*User-agent:\s*\*\s*$", robots_text):
+        errors.append("robots.txt is missing User-agent: *")
+    if not re.search(r"(?im)^\s*Allow:\s*/\s*$", robots_text):
+        errors.append("robots.txt is missing Allow: /")
+    if "Sitemap: " + BASE_URL + "/sitemap.xml" not in robots_text:
+        errors.append("robots.txt does not point to the canonical sitemap")
 
     for url in sitemap_urls:
-        if "#" in url:
-            errors.append(f"Anchor URL in sitemap: {url}")
+        if not url.startswith(BASE_URL + "/"):
+            errors.append(f"Non-canonical sitemap URL: {url}")
+        if any(token in url for token in ("#", "?", "localhost", "127.0.0.1")):
+            errors.append(f"Invalid sitemap URL: {url}")
         path = urlparse(url).path.strip("/")
         page = ROOT / path / "index.html" if path else ROOT / "index.html"
         if not page.exists():

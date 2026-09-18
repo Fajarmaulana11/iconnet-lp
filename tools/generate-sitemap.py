@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import re
 from pathlib import Path
-from urllib.parse import quote
 from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
 
@@ -38,16 +37,6 @@ def page_url(page: Path) -> str:
     return BASE_URL + "/" + relative
 
 
-def priority_for(url: str) -> str:
-    if url == BASE_URL + "/":
-        return "1.0"
-    if any(path in url for path in ("harga-iconnet", "cek-coverage-iconnet", "iconnet-")):
-        return "0.8"
-    if "blog/" in url:
-        return "0.7"
-    return "0.6"
-
-
 def main() -> None:
     urls: list[str] = []
     for page in ROOT.rglob("*.html"):
@@ -62,8 +51,6 @@ def main() -> None:
     for url in urls:
         item = SubElement(root, "url")
         SubElement(item, "loc").text = url
-        SubElement(item, "changefreq").text = "weekly" if url in {BASE_URL + "/", BASE_URL + "/blog/"} else "monthly"
-        SubElement(item, "priority").text = priority_for(url)
     xml = minidom.parseString(tostring(root, encoding="utf-8")).toprettyxml(indent="  ", encoding="UTF-8").decode("utf-8")
     SITEMAP_PATH.write_text(xml, encoding="utf-8")
     print(f"Generated sitemap URLs: {len(urls)}")

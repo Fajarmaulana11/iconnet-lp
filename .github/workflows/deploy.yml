@@ -37,6 +37,14 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq libxml2-utils >/dev/null
           xmllint --noout sitemap.xml
           echo "sitemap.xml valid"
+          grep -Fxq 'User-agent: *' robots.txt
+          grep -Fxq 'Allow: /' robots.txt
+          grep -Fxq 'Sitemap: https://www.jatengwifipln.com/sitemap.xml' robots.txt
+          ! grep -Eq '^Disallow: /$' robots.txt
+          echo "robots.txt valid"
+
+      - name: Validasi halaman publik dan sitemap
+        run: python3 tools/validate-seo.py
 
       - name: Cek referensi aset lokal tidak broken
         run: |
