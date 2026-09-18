@@ -2143,6 +2143,96 @@ body[data-theme="dark"] .hero-banner .hero-sub { color: rgba(223, 235, 255, 0.82
 body[data-theme="dark"] .hero-banner .hero-title .highlight { color: #93d1ff; }
 body[data-theme="dark"] .hero-banner .stat-divider { background: rgba(148,163,184,0.24); }
 
+body[data-theme="dark"] .paket-tab-btn.active {
+  background: linear-gradient(135deg, var(--primary), #5aa4ff);
+  color: #031320;
+  box-shadow: 0 12px 26px rgba(96, 168, 255, 0.28);
+}
+body[data-theme="dark"] .paket-tab-btn:not(.active) {
+  background: rgba(10, 18, 28, 0.65);
+  color: var(--text-secondary);
+}
+body[data-theme="dark"] .paket-card-v2 {
+  background: linear-gradient(180deg, rgba(9, 18, 28, 0.95), rgba(13, 29, 45, 0.95));
+  border-color: rgba(148, 163, 184, 0.18);
+  box-shadow: 0 20px 38px rgba(2, 10, 20, 0.26);
+}
+body[data-theme="dark"] .card-speed-num,
+body[data-theme="dark"] .card-price-num,
+body[data-theme="dark"] .card-install-price,
+body[data-theme="dark"] .card-price-currency,
+body[data-theme="dark"] .card-speed-unit,
+body[data-theme="dark"] .card-price-period,
+body[data-theme="dark"] .biz-price-num,
+body[data-theme="dark"] .biz-tier-badge,
+body[data-theme="dark"] .biz-install-val,
+body[data-theme="dark"] .biz-price {
+  color: var(--text-primary);
+}
+body[data-theme="dark"] .card-install,
+body[data-theme="dark"] .promo-after-price,
+body[data-theme="dark"] .biz-install-row {
+  background: rgba(15, 23, 42, 0.72);
+  border-color: rgba(148, 163, 184, 0.18);
+}
+body[data-theme="dark"] .card-features li,
+body[data-theme="dark"] .card-install-label,
+body[data-theme="dark"] .card-price-original,
+body[data-theme="dark"] .card-install-original,
+body[data-theme="dark"] .card-price-period,
+body[data-theme="dark"] .promo-after-price strong,
+body[data-theme="dark"] .biz-duration,
+body[data-theme="dark"] .biz-install-label,
+body[data-theme="dark"] .card-speed-label,
+body[data-theme="dark"] .card-speed-unit {
+  color: var(--text-secondary);
+}
+body[data-theme="dark"] .btn-card {
+  background: rgba(13, 28, 39, 0.92);
+  border-color: rgba(148, 163, 184, 0.22);
+  color: var(--text-primary);
+}
+body[data-theme="dark"] .btn-card:hover {
+  background: rgba(17, 35, 48, 1);
+  border-color: rgba(124, 183, 255, 0.7);
+  color: #dfeeff;
+}
+body[data-theme="dark"] .btn-card.primary {
+  background: linear-gradient(135deg, var(--wa-green), #1ec06b);
+  border-color: transparent;
+  color: #041a12;
+}
+body[data-theme="dark"] .btn-card.primary:hover {
+  background: linear-gradient(135deg, #1ec06b, var(--wa-dark));
+}
+body[data-theme="dark"] .biz-speed-btn {
+  background: rgba(13, 28, 39, 0.9);
+  border-color: rgba(148, 163, 184, 0.2);
+  color: var(--text-primary);
+}
+body[data-theme="dark"] .biz-speed-btn.active {
+  background: rgba(14, 34, 51, 1);
+  border-color: rgba(124, 183, 255, 0.8);
+  box-shadow: 0 10px 22px rgba(66, 153, 225, 0.18);
+}
+body[data-theme="dark"] .biz-card {
+  background: linear-gradient(180deg, rgba(9, 18, 28, 0.96), rgba(12, 26, 39, 0.96));
+  border-color: rgba(148, 163, 184, 0.18);
+}
+body[data-theme="dark"] .biz-card.biz-popular { border-color: rgba(124, 183, 255, 0.85); }
+body[data-theme="dark"] .biz-card.biz-premium { border-color: rgba(168, 146, 255, 0.8); }
+body[data-theme="dark"] .biz-price-wrap .biz-price,
+body[data-theme="dark"] .biz-install-row,
+body[data-theme="dark"] .biz-duration,
+body[data-theme="dark"] .biz-install-original {
+  color: var(--text-secondary);
+}
+body[data-theme="dark"] .pt-repos-container,
+body[data-theme="dark"] .card-price-discount,
+body[data-theme="dark"] .bundling-highlight {
+  color: var(--text-primary);
+}
+
 section[id] { scroll-margin-top: 72px; }
 img, iframe { max-width: 100%; }
 
