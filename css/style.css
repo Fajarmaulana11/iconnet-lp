@@ -1532,6 +1532,10 @@ body[data-theme="dark"] .gallery-cta p { color: var(--text-secondary); }
 
   /* Sections */
   .keunggulan-grid { grid-template-columns: 1fr; gap: 14px; }
+  .customer-gallery-grid { grid-template-columns: 1fr; gap: 14px; }
+  .customer-gallery-card,
+  .customer-gallery-card-featured { min-height: 330px; }
+  .gallery-cta { flex-direction: column; gap: 12px; }
   .paket-grid { grid-template-columns: 1fr; gap: 16px; }
   .testi-grid { grid-template-columns: 1fr; gap: 14px; }
   .steps-grid { flex-direction: column; align-items: center; }
@@ -1569,7 +1573,8 @@ body[data-theme="dark"] .gallery-cta p { color: var(--text-secondary); }
   .paket-card-v2,
   .biz-card,
   .keunggulan-card,
-  .testi-card {
+  .testi-card,
+  .customer-gallery-card {
     border-radius: 18px;
   }
   .btn-card {
