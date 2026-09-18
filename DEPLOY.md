@@ -15,6 +15,13 @@ Hanya kota dengan `publish: true` yang dibuat sebagai halaman publik. Kota lain 
 tercatat di registry sampai informasi area lokalnya dikonfirmasi, sehingga tidak membuat
 halaman doorway dengan klaim coverage yang belum diverifikasi.
 
+Sitemap dibuat otomatis dari halaman HTML yang memiliki title, meta description,
+canonical yang benar, dan tepat satu H1:
+
+```bash
+python tools/generate-sitemap.py
+```
+
 ## Alur
 
 | Event                   | Yang terjadi                            |

@@ -27,6 +27,9 @@ jobs:
             fi
           done
 
+      - name: Generate sitemap dari halaman crawlable
+        run: python3 tools/generate-sitemap.py
+
       - name: Validasi XML (sitemap & robots)
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq libxml2-utils >/dev/null
