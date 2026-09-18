@@ -5,27 +5,28 @@
 
 /* ---- Variables ---- */
 :root {
-  --primary: #0052CC;
-  --primary-dark: #003D99;
-  --primary-light: #E8F0FF;
-  --accent: #00C853;
-  --accent-dark: #009624;
+  --primary: #0b5fff;
+  --primary-dark: #0a46c5;
+  --primary-light: #edf4ff;
+  --secondary: #18b7d8;
+  --accent: #26d07c;
+  --accent-dark: #18a565;
   --wa-green: #25D366;
   --wa-dark: #128C7E;
-  --text-primary: #0A0A0A;
-  --text-secondary: #4A4A4A;
-  --text-muted: #8A8A8A;
-  --bg: #FFFFFF;
-  --bg-soft: #F7F9FC;
-  --bg-dark: #0A1628;
-  --border: #E8ECF0;
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
-  --shadow-md: 0 8px 32px rgba(0,0,0,0.10);
-  --shadow-lg: 0 20px 60px rgba(0,0,0,0.14);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --bg: #f8fbff;
+  --bg-soft: #eef5ff;
+  --bg-dark: #081827;
+  --border: rgba(148, 163, 184, 0.22);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 30px;
+  --shadow-sm: 0 8px 20px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 18px 48px rgba(13, 39, 83, 0.12);
+  --shadow-lg: 0 30px 80px rgba(8, 24, 39, 0.15);
   --transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
   --font: 'Plus Jakarta Sans', sans-serif;
 }
@@ -33,7 +34,16 @@
 /* ---- Reset ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
-body { font-family: var(--font); color: var(--text-primary); background: var(--bg); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font);
+  color: var(--text-primary);
+  background:
+    radial-gradient(circle at top left, rgba(11, 95, 255, 0.08), transparent 26%),
+    radial-gradient(circle at bottom right, rgba(24, 183, 216, 0.08), transparent 22%),
+    var(--bg);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
@@ -42,7 +52,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 /* ---- Container ---- */
 .container {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -52,31 +62,33 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--wa-green);
+  background: linear-gradient(135deg, var(--wa-green), #1ebe64);
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 15px;
-  padding: 14px 28px;
-  border-radius: 50px;
+  padding: 15px 28px;
+  border-radius: 999px;
   transition: var(--transition);
   white-space: nowrap;
+  box-shadow: 0 14px 28px rgba(37, 211, 102, 0.24);
 }
-.btn-primary:hover { background: var(--wa-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.35); }
+.btn-primary:hover { background: linear-gradient(135deg, var(--wa-dark), #0da67d); transform: translateY(-2px); box-shadow: 0 18px 30px rgba(37, 211, 102, 0.32); }
 
 .btn-ghost {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: transparent;
+  background: rgba(255,255,255,0.7);
   color: var(--text-secondary);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 15px;
   padding: 14px 24px;
-  border-radius: 50px;
-  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  border: 1.5px solid rgba(148,163,184,0.35);
   transition: var(--transition);
+  backdrop-filter: blur(6px);
 }
-.btn-ghost:hover { border-color: var(--primary); color: var(--primary); }
+.btn-ghost:hover { border-color: rgba(11,95,255,0.55); color: var(--primary); background: rgba(255,255,255,0.95); }
 
 .btn-outline {
   display: inline-flex;
@@ -84,7 +96,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   gap: 8px;
   background: transparent;
   color: var(--wa-green);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 15px;
   padding: 13px 28px;
   border-radius: 50px;
@@ -98,26 +110,28 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .section-label {
   display: inline-block;
   font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--primary);
-  background: var(--primary-light);
-  padding: 5px 14px;
-  border-radius: 50px;
-  margin-bottom: 14px;
+  background: linear-gradient(135deg, rgba(11,95,255,0.1), rgba(24,183,216,0.16));
+  padding: 7px 16px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(11,95,255,0.1);
 }
 .section-title {
-  font-size: clamp(24px, 4vw, 36px);
-  font-weight: 700;
-  line-height: 1.25;
+  font-size: clamp(24px, 4vw, 38px);
+  font-weight: 800;
+  line-height: 1.2;
   color: var(--text-primary);
   margin-bottom: 12px;
+  letter-spacing: -0.04em;
 }
 .section-sub {
   font-size: 15px;
   color: var(--text-muted);
-  max-width: 560px;
+  max-width: 620px;
   margin: 0 auto;
 }
 
@@ -128,17 +142,17 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
   transition: var(--transition);
 }
-.navbar.scrolled { box-shadow: var(--shadow-sm); }
+.navbar.scrolled { box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); }
 .nav-inner {
   display: flex;
   align-items: center;
-  height: 64px;
+  height: 72px;
   gap: 32px;
 }
 .logo {
@@ -150,7 +164,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .logo-icon {
   width: 36px;
   height: 36px;
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: #fff;
   font-weight: 700;
   font-size: 13px;
@@ -159,6 +173,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   align-items: center;
   justify-content: center;
   letter-spacing: 0.04em;
+  box-shadow: 0 10px 22px rgba(11, 95, 255, 0.25);
 }
 .logo-text {
   font-size: 18px;
@@ -174,7 +189,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 }
 .nav-links a {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-secondary);
   transition: var(--transition);
   position: relative;
@@ -182,11 +197,11 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .nav-links a::after {
   content: '';
   position: absolute;
-  bottom: -2px;
+  bottom: -6px;
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--primary);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
   border-radius: 2px;
   transition: var(--transition);
 }
@@ -196,16 +211,17 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   display: flex;
   align-items: center;
   gap: 7px;
-  background: var(--wa-green);
+  background: linear-gradient(135deg, var(--wa-green), #1cc963);
   color: #fff;
   font-size: 13px;
-  font-weight: 600;
-  padding: 9px 18px;
-  border-radius: 50px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 999px;
   flex-shrink: 0;
   transition: var(--transition);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.22);
 }
-.btn-wa-nav:hover { background: var(--wa-dark); }
+.btn-wa-nav:hover { background: linear-gradient(135deg, var(--wa-dark), #0da57c); }
 .btn-wa-nav i { font-size: 16px; }
 .hamburger {
   display: none;
@@ -219,7 +235,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
    HERO
    ============================== */
 .hero {
-  background: var(--bg-soft);
+  background: linear-gradient(180deg, #f7fbff 0%, #edf5ff 100%);
   padding: 80px 0 100px;
   overflow: hidden;
   position: relative;
@@ -227,11 +243,11 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .hero::before {
   content: '';
   position: absolute;
-  top: -120px;
-  right: -120px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(0,82,204,0.07) 0%, transparent 70%);
+  top: -180px;
+  right: -140px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(11,95,255,0.13) 0%, rgba(11,95,255,0.06) 30%, transparent 70%);
   pointer-events: none;
 }
 .hero-inner {
@@ -245,20 +261,21 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   align-items: center;
   gap: 7px;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--primary);
-  background: var(--primary-light);
-  padding: 7px 16px;
-  border-radius: 50px;
+  background: rgba(255,255,255,0.8);
+  padding: 8px 16px;
+  border-radius: 999px;
   margin-bottom: 24px;
-  border: 1px solid rgba(0,82,204,0.15);
+  border: 1px solid rgba(11,95,255,0.12);
+  box-shadow: var(--shadow-sm);
 }
 .badge-trust i { font-size: 15px; }
 .hero-title {
-  font-size: clamp(28px, 4.5vw, 48px);
+  font-size: clamp(28px, 4.5vw, 52px);
   font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
+  line-height: 1.12;
+  letter-spacing: -0.05em;
   color: var(--text-primary);
   margin-bottom: 20px;
 }
@@ -270,8 +287,8 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   font-size: 17px;
   color: var(--text-secondary);
   margin-bottom: 36px;
-  line-height: 1.7;
-  max-width: 480px;
+  line-height: 1.75;
+  max-width: 510px;
 }
 .hero-cta {
   display: flex;
@@ -285,16 +302,17 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   align-items: center;
   gap: 24px;
   padding: 20px 24px;
-  background: #fff;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.9);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: var(--shadow-sm);
   width: fit-content;
 }
 .stat { text-align: center; }
 .stat-num {
   display: block;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-primary);
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -308,7 +326,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .stat-divider {
   width: 1px;
   height: 36px;
-  background: var(--border);
+  background: rgba(148,163,184,0.3);
 }
 /* Hero visual */
 .hero-visual { display: flex; justify-content: center; align-items: center; }
@@ -329,7 +347,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .ring {
   position: absolute;
   border-radius: 50%;
-  border: 1.5px solid rgba(0,82,204,0.15);
+  border: 1.5px solid rgba(11,95,255,0.18);
   animation: pulse-ring 3s ease-out infinite;
 }
 .ring-1 { width: 120px; height: 120px; animation-delay: 0s; }
@@ -343,7 +361,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .wifi-icon {
   width: 72px;
   height: 72px;
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -385,44 +403,47 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 }
 .keunggulan-card {
   padding: 28px 24px;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(148,163,184,0.2);
   border-radius: var(--radius-lg);
   transition: var(--transition);
-  background: var(--bg);
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(240,246,255,0.96));
+  box-shadow: 0 8px 20px rgba(15,23,42,0.04);
 }
 .keunggulan-card:hover {
-  border-color: var(--primary);
+  border-color: rgba(11,95,255,0.35);
   box-shadow: var(--shadow-md);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 .k-icon {
-  width: 52px;
-  height: 52px;
-  background: var(--primary-light);
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(11,95,255,0.12), rgba(24,183,216,0.15));
   color: var(--primary);
-  border-radius: var(--radius-md);
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+  box-shadow: inset 0 0 0 1px rgba(11,95,255,0.05);
 }
 .keunggulan-card h3 {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   margin-bottom: 10px;
   color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 .keunggulan-card p {
   font-size: 14px;
   color: var(--text-secondary);
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 /* ==============================
    PAKET TABS — NEW
    ============================== */
-.paket { padding: 90px 0; background: var(--bg-soft); }
+.paket { padding: 90px 0; background: linear-gradient(180deg, #f4f9ff 0%, #eef5ff 100%); }
  
 .paket-tabs {
   display: flex;
@@ -500,18 +521,19 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
  
 /* ---- Card Base ---- */
 .paket-card-v2 {
-  background: var(--bg);
-  border: 1.5px solid var(--border);
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(245,249,255,0.98));
+  border: 1.5px solid rgba(148,163,184,0.25);
   border-radius: var(--radius-lg);
   padding: 28px 24px 24px;
   position: relative;
   transition: var(--transition);
   display: flex;
   flex-direction: column;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.04);
 }
-.paket-card-v2:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); border-color: rgba(0,82,204,0.3); }
-.paket-card-v2.popular { border: 2px solid var(--primary); box-shadow: 0 8px 40px rgba(0,82,204,0.12); }
-.paket-card-v2.bundling-best { border: 2px solid #7C3AED; box-shadow: 0 8px 40px rgba(124,58,237,0.12); }
+.paket-card-v2:hover { box-shadow: var(--shadow-md); transform: translateY(-6px); border-color: rgba(11,95,255,0.35); }
+.paket-card-v2.popular { border: 2px solid var(--primary); box-shadow: 0 18px 44px rgba(11,95,255,0.12); }
+.paket-card-v2.bundling-best { border: 2px solid #7C3AED; box-shadow: 0 18px 44px rgba(124,58,237,0.12); }
  
 .card-badge {
   position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
@@ -674,8 +696,17 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
    CTA WHATSAPP
    ============================== */
 .cta-wa {
-  background: var(--bg-dark);
+  background: linear-gradient(135deg, #071a2d 0%, #0d2546 100%);
   padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+.cta-wa::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at right center, rgba(11,95,255,0.18), transparent 30%);
+  pointer-events: none;
 }
 .cta-inner {
   display: flex;
@@ -683,32 +714,36 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   justify-content: space-between;
   gap: 32px;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 .cta-text h2 {
-  font-size: 26px;
-  font-weight: 700;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 800;
   color: #fff;
   margin-bottom: 8px;
+  letter-spacing: -0.04em;
 }
 .cta-text p {
   font-size: 15px;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.7);
 }
 .btn-wa-big {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: var(--wa-green);
+  background: linear-gradient(135deg, var(--wa-green), #1cc963);
   color: #fff;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 800;
   padding: 16px 36px;
-  border-radius: 50px;
+  border-radius: 999px;
   white-space: nowrap;
   flex-shrink: 0;
   transition: var(--transition);
+  box-shadow: 0 16px 36px rgba(37,211,102,0.3);
 }
-.btn-wa-big:hover { background: var(--wa-dark); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,0.4); }
+.btn-wa-big:hover { background: linear-gradient(135deg, var(--wa-dark), #0da67d); transform: translateY(-2px); box-shadow: 0 20px 40px rgba(37,211,102,0.38); }
 .btn-wa-big i { font-size: 22px; }
 
 /* ==============================
