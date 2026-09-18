@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.jatengwifipln.com/</loc>
-    <lastmod>2026-05-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://www.jatengwifipln.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.jatengwifipln.com/harga-iconnet/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.jatengwifipln.com/cara-daftar-iconnet/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jatengwifipln.com/cek-coverage-iconnet/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.jatengwifipln.com/iconnet-semarang/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.jatengwifipln.com/iconnet-solo/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.jatengwifipln.com/iconnet-purwokerto/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.jatengwifipln.com/iconnet-magelang/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jatengwifipln.com/iconnet-tegal/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jatengwifipln.com/iconnet-kudus/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jatengwifipln.com/iconnet-cilacap/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jatengwifipln.com/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jatengwifipln.com/blog/cara-daftar/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.jatengwifipln.com/blog/cara-pilih-wifi/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.jatengwifipln.com/blog/harga-paket/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jatengwifipln.com/blog/iconnet-biz-jateng/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.jatengwifipln.com/blog/iconnet-purwokerto/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.jatengwifipln.com/blog/iconnet-semarang/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.jatengwifipln.com/blog/iconnet-solo/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.jatengwifipln.com/blog/internet-lemot/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.jatengwifipln.com/blog/promo-terbaru/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

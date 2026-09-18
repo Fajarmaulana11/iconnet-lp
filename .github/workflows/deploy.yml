@@ -102,6 +102,7 @@ jobs:
             **/*.py
             **/requirements.txt
             **/*.zip
+            **/backup/**
             **/.gitignore
             .ftp-deploy-sync-state.json
           log-level: standard
