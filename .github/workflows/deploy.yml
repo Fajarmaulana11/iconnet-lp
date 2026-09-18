@@ -28,7 +28,9 @@ jobs:
           done
 
       - name: Generate sitemap dari halaman crawlable
-        run: python3 tools/generate-sitemap.py
+        run: |
+          python3 tools/generate-seo-pages.py
+          python3 tools/generate-sitemap.py
 
       - name: Validasi XML (sitemap & robots)
         run: |
