@@ -3,6 +3,18 @@
 Repo ini adalah **static site** (HTML/CSS/JS murni). Tidak ada langkah kompilasi, jadi
 "build" di sini berarti: validasi aset → sinkronisasi file ke `public_html` di hosting.
 
+## Generate halaman SEO
+
+Sumber data kota berada di `data/cities.json`. Jalankan generator setelah mengubah data:
+
+```bash
+python tools/generate-seo-pages.py
+```
+
+Hanya kota dengan `publish: true` yang dibuat sebagai halaman publik. Kota lain tetap
+tercatat di registry sampai informasi area lokalnya dikonfirmasi, sehingga tidak membuat
+halaman doorway dengan klaim coverage yang belum diverifikasi.
+
 ## Alur
 
 | Event                   | Yang terjadi                            |
