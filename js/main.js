@@ -379,6 +379,36 @@ if (backToTop) {
 // =========================
 // MOBILE MENU
 // =========================
+const themeToggle = document.getElementById('themeToggle');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+const applyTheme = (isDark) => {
+  document.body.setAttribute('data-theme', isDark ? 'dark' : 'light');
+
+  if (themeToggle) {
+    const icon = themeToggle.querySelector('i');
+
+    if (icon) {
+      icon.className = isDark ? 'ti ti-moon' : 'ti ti-sun';
+    }
+  }
+};
+
+const savedTheme = localStorage.getItem('iconnet-theme');
+if (savedTheme) {
+  applyTheme(savedTheme === 'dark');
+} else {
+  applyTheme(prefersDark.matches);
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('iconnet-theme', nextTheme);
+    applyTheme(nextTheme === 'dark');
+  });
+}
+
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 
