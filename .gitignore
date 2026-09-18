@@ -3,6 +3,9 @@ hasil_riset_kompetitor.xlsx
 
 # Development and research files
 *.py
+!tools/generate-seo-pages.py
+!tools/generate-sitemap.py
+!tools/validate-seo.py
 requirements.txt
 *.zip
 .ftp-deploy-sync-state.json
