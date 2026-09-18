@@ -48,7 +48,7 @@ jobs:
           pattern = re.compile(r'(?:href|src)="([^"#?]+)"')
 
           for html in root.rglob("*.html"):
-              if ".git" in html.parts:
+              if ".git" in html.parts or "templates" in html.parts or "backup" in html.parts:
                   continue
               text = html.read_text(encoding="utf-8", errors="ignore")
               for ref in pattern.findall(text):
@@ -108,6 +108,7 @@ jobs:
             **/requirements.txt
             **/*.zip
             **/backup/**
+            **/templates/**
             **/.gitignore
             .ftp-deploy-sync-state.json
           log-level: standard
