@@ -935,7 +935,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   padding: 90px 0;
   background: linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 100%);
 }
-.gallery-header { max-width: 680px; }
+.gallery-header { max-width: 680px; margin-right: auto; margin-left: auto; text-align: center; }
 .customer-gallery-grid {
   display: grid;
   grid-template-columns: 1.35fr 1fr 1fr;
@@ -945,7 +945,8 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .customer-gallery-more:not([hidden]) { display: contents; }
 .customer-gallery-card {
   position: relative;
-  min-height: 360px;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
   overflow: hidden;
   margin: 0;
   border: 1px solid rgba(148, 163, 184, 0.2);
@@ -954,7 +955,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   box-shadow: var(--shadow-sm);
   isolation: isolate;
 }
-.customer-gallery-card-featured { min-height: 430px; }
+.customer-gallery-card-featured { aspect-ratio: 1 / 1; }
 .customer-gallery-card::after {
   content: '';
   position: absolute;
