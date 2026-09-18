@@ -1975,6 +1975,56 @@ body { line-height: 1.55; }
   border: 1px solid rgba(145, 214, 255, 0.28);
   color: #dff3ff;
 }
+.wifi-logo-wrap {
+  position: absolute;
+  right: 165px;
+  bottom: 52px;
+  width: 200px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+}
+.wifi-logo {
+  position: relative;
+  width: 138px;
+  height: 138px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(125, 198, 255, 0.35) 0%, rgba(125, 198, 255, 0.12) 28%, rgba(12, 26, 43, 0.2) 58%, rgba(12, 26, 43, 0.75) 100%);
+  box-shadow: 0 0 40px rgba(125, 198, 255, 0.28), inset 0 0 18px rgba(177, 236, 255, 0.3);
+}
+.wifi-core {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7dc6ff 0%, #dff7ff 100%);
+  box-shadow: 0 0 20px rgba(125, 198, 255, 0.9);
+  z-index: 3;
+}
+.wifi-wave {
+  position: absolute;
+  border: 3px solid rgba(143, 222, 255, 0.92);
+  border-color: rgba(143, 222, 255, 0.9) transparent transparent transparent;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  filter: drop-shadow(0 0 10px rgba(143, 222, 255, 0.7));
+}
+.wifi-wave-1 {
+  width: 120px;
+  height: 120px;
+}
+.wifi-wave-2 {
+  width: 84px;
+  height: 84px;
+  opacity: 0.9;
+}
+.wifi-wave-3 {
+  width: 48px;
+  height: 48px;
+  opacity: 0.9;
+}
 .pole-wrapper {
   position: absolute;
   right: 165px;
@@ -2051,6 +2101,11 @@ body { line-height: 1.55; }
 .tech-seller .head { left: 24px; }
 .tech-seller .arm-left { left: 7px; }
 .tech-seller .arm-right { right: 12px; }
+.wifi-logo-wrap {
+  right: 175px;
+  bottom: 72px;
+  transform: scale(1.08);
+}
 .wifi-signal {
   position: absolute;
   border: 1.5px solid rgba(126, 232, 255, 0.8);
@@ -2141,6 +2196,11 @@ body { line-height: 1.55; }
   }
   .hero-banner .hero-title { font-size: clamp(26px, 8vw, 34px); }
   .hero-banner .hero-sub { font-size: 15px; }
+  .wifi-logo-wrap {
+    right: 70px;
+    bottom: 84px;
+    transform: scale(0.82);
+  }
 }
 
 @media (max-width: 480px) {
@@ -2148,8 +2208,11 @@ body { line-height: 1.55; }
   .hero-banner .hero-content { padding: 18px 16px; }
   .hero-banner .hero-cta { align-items: stretch; }
   .customer-bubble { right: 90px; top: 95px; }
-  .pole-wrapper { right: 90px; bottom: 14px; transform: scale(0.82); }
-  .tech-seller { left: 12px; bottom: 10px; }
+  .wifi-logo-wrap {
+    right: 56px;
+    bottom: 116px;
+    transform: scale(0.7);
+  }
 }
 
 /* ==============================
