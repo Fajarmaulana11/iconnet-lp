@@ -36,7 +36,7 @@
     {"slug":"iconnet-brebes","name":"Brebes","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
     {"slug":"iconnet-grobogan","name":"Grobogan","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
     {"slug":"iconnet-banjarnegara","name":"Banjarnegara","region":"Jawa Tengah","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
-    {"slug":"iconnet-yogyakarta","name":"Yogyakarta","region":"Daerah Istimewa Yogyakarta","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
+    {"slug":"iconnet-yogyakarta","name":"Yogyakarta","region":"Daerah Istimewa Yogyakarta","publish":true,"areas":[],"local_note":"Data coverage tingkat kecamatan belum tersedia di project. Verifikasi alamat diperlukan sebelum pemasangan."},
     {"slug":"iconnet-sleman","name":"Sleman","region":"Daerah Istimewa Yogyakarta","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
     {"slug":"iconnet-bantul","name":"Bantul","region":"Daerah Istimewa Yogyakarta","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
     {"slug":"iconnet-kulon-progo","name":"Kulon Progo","region":"Daerah Istimewa Yogyakarta","publish":false,"areas":[],"local_note":"Data area lokal perlu dikonfirmasi sebelum halaman dipublikasikan."},
