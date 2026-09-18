@@ -92,6 +92,30 @@ function initPromoGallery() {
 document.addEventListener('DOMContentLoaded', initPromoGallery);
 
 // =========================
+// CUSTOMER GALLERY
+// =========================
+function initCustomerGallery() {
+
+  const button = document.getElementById('galleryMoreBtn');
+  const moreContent = document.getElementById('galleryMoreContent');
+
+  if (!button || !moreContent) {
+    return;
+  }
+
+  button.addEventListener('click', () => {
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+    moreContent.hidden = isExpanded;
+    button.setAttribute('aria-expanded', String(!isExpanded));
+    button.innerHTML = isExpanded
+      ? '<i class="ti ti-photo-plus"></i> Lihat Selengkapnya'
+      : '<i class="ti ti-chevron-up"></i> Sembunyikan';
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initCustomerGallery);
+
+// =========================
 // BIZ SPEED SWITCH
 // =========================
 function switchBizSpeed(speed, btn) {

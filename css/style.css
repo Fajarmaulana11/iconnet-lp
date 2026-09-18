@@ -942,6 +942,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   gap: 18px;
   margin-top: 34px;
 }
+.customer-gallery-more:not([hidden]) { display: contents; }
 .customer-gallery-card {
   position: relative;
   min-height: 360px;
@@ -1003,6 +1004,8 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   text-align: center;
 }
 .gallery-cta p { margin: 0; font-size: 14px; }
+.gallery-more-btn { border: 1px solid var(--primary); color: var(--primary); background: transparent; }
+.gallery-more-btn:hover { color: #fff; background: var(--primary); }
 body[data-theme="dark"] .customer-gallery {
   background: linear-gradient(180deg, #0b1d2e 0%, var(--bg) 100%);
 }
