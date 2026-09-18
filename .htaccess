@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Retain useful destinations for legacy empty blog paths.
+Redirect 301 /blog/iconnet-biz-jateng/ /harga-iconnet/
+Redirect 301 /blog/iconnet-purwokerto/ /iconnet-purwokerto/
+Redirect 301 /blog/iconnet-solo/ /iconnet-solo/
+Redirect 301 /blog/internet-lemot/ /blog/cara-pilih-wifi/
+Redirect 301 /blog/promo-terbaru/ /blog/harga-paket/
