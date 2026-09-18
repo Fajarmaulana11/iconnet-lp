@@ -1719,32 +1719,145 @@ body { line-height: 1.55; }
   align-items: center;
   overflow: hidden;
   border-radius: 26px;
-  background: linear-gradient(135deg, #081827 0%, #0c2446 35%, #10376a 100%);
+  background: linear-gradient(135deg, #071a2d 0%, #0b2444 30%, #0e3d77 100%);
   box-shadow: 0 26px 60px rgba(8, 24, 39, 0.14);
   isolation: isolate;
 }
-.hero-banner-image,
-.hero-banner-overlay {
+.hero-banner::before {
+  content: '';
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
+  background: radial-gradient(circle at 70% 20%, rgba(98, 180, 255, 0.2), transparent 20%),
+              linear-gradient(90deg, rgba(6, 15, 27, 0.9) 0%, rgba(10, 27, 48, 0.72) 38%, rgba(14, 61, 119, 0.18) 100%);
+  z-index: 0;
 }
-.hero-banner-image {
-  z-index: -2;
-  object-fit: cover;
-  object-position: center 34%;
-  opacity: 0.42;
-  transform: scale(1.08);
-  filter: saturate(1.1) contrast(1.05);
+.hero-scene {
+  position: absolute;
+  inset: 0 0 0 42%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
 }
-.hero-banner-overlay {
-  z-index: -1;
-  background:
-    linear-gradient(90deg, rgba(7, 18, 32, 0.9) 0%, rgba(8, 32, 62, 0.7) 35%, rgba(11, 95, 255, 0.12) 68%, rgba(11, 95, 255, 0.02) 100%),
-    radial-gradient(circle at 80% 20%, rgba(24, 183, 216, 0.28), transparent 26%);
+.wifi-glow {
+  position: absolute;
+  right: 110px;
+  top: 74px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 211, 255, 0.32) 0%, rgba(124, 211, 255, 0.12) 36%, transparent 72%);
+  filter: blur(12px);
 }
+.signal-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(145, 214, 255, 0.4);
+}
+.ring-a { right: 70px; top: 42px; width: 220px; height: 220px; }
+.ring-b { right: 110px; top: 80px; width: 170px; height: 170px; }
+.ring-c { right: 145px; top: 115px; width: 110px; height: 110px; }
+.customer-bubble {
+  position: absolute;
+  right: 160px;
+  top: 130px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(8, 22, 35, 0.7);
+  border: 1px solid rgba(145, 214, 255, 0.28);
+  color: #dff3ff;
+}
+.pole-wrapper {
+  position: absolute;
+  right: 165px;
+  bottom: 18px;
+  width: 180px;
+  height: 240px;
+}
+.pole {
+  position: absolute;
+  right: 52px;
+  bottom: 0;
+  width: 14px;
+  height: 220px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #c5d5ea 0%, #8da5c5 20%, #6b7f9d 100%);
+  box-shadow: 0 0 28px rgba(96, 166, 255, 0.3);
+}
+.tech {
+  position: absolute;
+  width: 84px;
+  height: 118px;
+}
+.tech .head {
+  position: absolute;
+  top: 0;
+  left: 26px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #f5d4b1;
+  box-shadow: inset 0 -3px 0 rgba(0,0,0,0.04);
+}
+.tech .body {
+  position: absolute;
+  top: 24px;
+  left: 17px;
+  width: 42px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #1db6ff 0%, #1480d6 100%);
+  box-shadow: inset 0 -8px 0 rgba(0,0,0,0.08);
+}
+.tech .arm {
+  position: absolute;
+  top: 30px;
+  width: 12px;
+  height: 42px;
+  border-radius: 999px;
+  background: #f5d4b1;
+}
+.tech .arm-left { left: 8px; transform: rotate(28deg); }
+.tech .arm-right { right: 8px; transform: rotate(-30deg); }
+.tech .leg {
+  position: absolute;
+  bottom: 1px;
+  width: 12px;
+  height: 38px;
+  border-radius: 999px;
+  background: #0d1f38;
+}
+.tech .leg-left { left: 22px; transform: rotate(8deg); }
+.tech .leg-right { right: 22px; transform: rotate(-8deg); }
+.tech-climber {
+  right: 10px;
+  bottom: 128px;
+  transform: rotate(-6deg);
+}
+.tech-seller {
+  left: 18px;
+  bottom: 18px;
+  transform: scale(0.96);
+}
+.tech-seller .body { background: linear-gradient(180deg, #25d366 0%, #1aa859 100%); }
+.tech-seller .head { left: 24px; }
+.tech-seller .arm-left { left: 7px; }
+.tech-seller .arm-right { right: 12px; }
+.wifi-signal {
+  position: absolute;
+  border: 1.5px solid rgba(126, 232, 255, 0.8);
+  border-radius: 50%;
+  opacity: 0.9;
+}
+.wifi-signal-1 { right: 120px; bottom: 90px; width: 100px; height: 100px; }
+.wifi-signal-2 { right: 185px; bottom: 120px; width: 64px; height: 64px; }
+.wifi-signal-3 { right: 255px; bottom: 150px; width: 38px; height: 38px; }
 .hero-banner .hero-content {
+  position: relative;
+  z-index: 2;
   width: min(560px, 54%);
   margin: 34px 0 34px 42px;
   padding: 28px 28px 22px;
@@ -1806,9 +1919,14 @@ body { line-height: 1.55; }
     align-items: flex-end;
     border-radius: 20px;
   }
-  .hero-banner-image { object-position: 48% 28%; }
-  .hero-banner-overlay {
-    background: linear-gradient(180deg, rgba(6, 17, 30, 0.2) 15%, rgba(6, 17, 30, 0.52) 45%, rgba(5, 19, 33, 0.9) 100%);
+  .hero-banner::before {
+    background: linear-gradient(180deg, rgba(6, 15, 27, 0.16) 0%, rgba(3, 9, 19, 0.5) 45%, rgba(4, 15, 30, 0.88) 100%);
+  }
+  .hero-scene {
+    inset: 0;
+    opacity: 0.78;
+    transform: scale(0.9);
+    transform-origin: center bottom;
   }
   .hero-banner .hero-content {
     width: calc(100% - 24px);
@@ -1824,6 +1942,9 @@ body { line-height: 1.55; }
   .hero-banner { min-height: 575px; }
   .hero-banner .hero-content { padding: 18px 16px; }
   .hero-banner .hero-cta { align-items: stretch; }
+  .customer-bubble { right: 90px; top: 95px; }
+  .pole-wrapper { right: 90px; bottom: 14px; transform: scale(0.82); }
+  .tech-seller { left: 12px; bottom: 10px; }
 }
 
 /* ==============================
