@@ -1536,9 +1536,13 @@ body[data-theme="dark"] .gallery-cta p { color: var(--text-secondary); }
 
   /* Sections */
   .keunggulan-grid { grid-template-columns: 1fr; gap: 14px; }
-  .customer-gallery-grid { grid-template-columns: 1fr; gap: 14px; }
+  .customer-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .customer-gallery-card,
-  .customer-gallery-card-featured { min-height: 330px; }
+  .customer-gallery-card-featured { aspect-ratio: 1 / 1; min-height: 0; }
+  .customer-gallery-card figcaption { right: 12px; bottom: 12px; left: 12px; gap: 4px; }
+  .customer-gallery-card strong { font-size: 13px; }
+  .customer-gallery-card figcaption > span:last-child { font-size: 10px; line-height: 1.35; }
+  .gallery-card-tag { font-size: 9px; letter-spacing: 0.03em; }
   .gallery-cta { flex-direction: column; gap: 12px; }
   .paket-grid { grid-template-columns: 1fr; gap: 16px; }
   .testi-grid { grid-template-columns: 1fr; gap: 14px; }
