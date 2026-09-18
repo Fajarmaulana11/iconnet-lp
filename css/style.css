@@ -2186,13 +2186,22 @@ body[data-theme="dark"] .biz-duration,
 body[data-theme="dark"] .biz-install-label,
 body[data-theme="dark"] .card-speed-label,
 body[data-theme="dark"] .card-speed-unit,
-body[data-theme="dark"] .card-price-period {
-  color: #d8e6fb;
+body[data-theme="dark"] .card-price-period,
+body[data-theme="dark"] .promo-after-price,
+body[data-theme="dark"] .promo-after-price strong {
+  color: #edf6ff;
 }
 body[data-theme="dark"] .card-price-discount,
 body[data-theme="dark"] .card-install-free,
 body[data-theme="dark"] .promo-period-badge {
   color: #99f7bf;
+}
+body[data-theme="dark"] .card-features li i {
+  color: #6ee7b7;
+}
+body[data-theme="dark"] .promo-after-price {
+  background: rgba(17, 24, 39, 0.98);
+  border-color: rgba(148, 163, 184, 0.22);
 }
 body[data-theme="dark"] .btn-card {
   background: rgba(13, 28, 39, 0.92);
