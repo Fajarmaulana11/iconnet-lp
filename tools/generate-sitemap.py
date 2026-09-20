@@ -9,6 +9,7 @@ from xml.dom import minidom
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://www.jatengwifipln.com"
 SITEMAP_PATH = ROOT / "sitemap.xml"
+EXCLUDED_SITEMAP_PATHS = {"privacy-policy.html", "syarat-ketentuan.html"}
 
 
 def is_crawlable(page: Path, text: str) -> bool:
@@ -41,6 +42,8 @@ def main() -> None:
     urls: list[str] = []
     for page in ROOT.rglob("*.html"):
         if any(part in {".git", "backup", "templates"} for part in page.parts):
+            continue
+        if page.relative_to(ROOT).as_posix() in EXCLUDED_SITEMAP_PATHS:
             continue
         text = page.read_text(encoding="utf-8", errors="ignore")
         if is_crawlable(page, text):
