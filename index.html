@@ -9,16 +9,6 @@
   <!-- ✅ SEO: Title Tag — keyword utama + lokasi + CTA (≤60 karakter) -->
   <title>Pasang WiFi ICONNET Jateng &amp; Jogja | Harga Paket 2026</title>
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KT743YE173"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KT743YE173');
-</script>
-
   <!-- ✅ SEO: Meta Description — harga, kota, CTA (≤155 karakter) -->
   <meta name="description" content="Pasang WiFi ICONNET Jawa Tengah &amp; Yogyakarta via WhatsApp. Cek harga, coverage Semarang, Solo, Purwokerto, Magelang, dan promo gratis instalasi." />
 
@@ -45,8 +35,6 @@
 
   <!-- ✅ SEO: Canonical URL -->
   <link rel="canonical" href="https://www.jatengwifipln.com/" />
-  <link rel="preload" as="image" href="images/promo-september-1.jpg" fetchpriority="high" />
-
   <!-- ✅ SEO: Schema Markup JSON-LD — LocalBusiness + FAQPage + Product -->
   <script type="application/ld+json">
   {
@@ -218,6 +206,25 @@
   <link rel="apple-touch-icon" href="images/faveicon.jpg">
 
   <script defer src="js/main.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      const loadAnalytics = () => {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function gtag() { window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', 'G-KT743YE173');
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-KT743YE173';
+        document.head.appendChild(script);
+      };
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(loadAnalytics, { timeout: 3000 });
+      } else {
+        setTimeout(loadAnalytics, 1500);
+      }
+    }, { once: true });
+  </script>
 </head>
 
 <body>
