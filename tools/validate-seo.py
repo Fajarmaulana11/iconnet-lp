@@ -20,6 +20,7 @@ class PageParser(HTMLParser):
         self.h1 = 0
         self.description = False
         self.canonical = ""
+        self.noindex = False
         self.refs: list[str] = []
         self.schema_blocks: list[str] = []
         self.in_title = False
@@ -39,6 +40,8 @@ class PageParser(HTMLParser):
                     self.refs.append(value)
         if tag == "meta" and attributes.get("name") == "description" and attributes.get("content"):
             self.description = True
+        if tag == "meta" and attributes.get("name") == "robots" and "noindex" in (attributes.get("content") or "").lower():
+            self.noindex = True
         if tag == "link" and attributes.get("rel") == "canonical":
             self.canonical = attributes.get("href", "")
         if tag == "script" and attributes.get("type") == "application/ld+json":
@@ -110,8 +113,13 @@ def main() -> int:
         if not page.exists():
             errors.append(f"Sitemap URL has no local page: {url}")
 
-    pages = [ROOT / "index.html"]
-    pages += [ROOT / urlparse(url).path.strip("/") / "index.html" for url in sitemap_urls if urlparse(url).path.strip("/")]
+    sitemap_pages = {(
+        ROOT / urlparse(url).path.strip("/") / "index.html" if urlparse(url).path.strip("/") else ROOT / "index.html"
+    ).resolve() for url in sitemap_urls}
+    pages = [
+        page for page in ROOT.rglob("*.html")
+        if not any(part in {".git", "backup", "templates"} for part in page.parts)
+    ]
     checked: set[Path] = set()
     for page in pages:
         page = page.resolve()
@@ -126,6 +134,14 @@ def main() -> int:
             errors.append(f"Missing meta description: {page.relative_to(ROOT)}")
         if not parser.canonical.startswith(BASE_URL + "/"):
             errors.append(f"Invalid canonical: {page.relative_to(ROOT)} -> {parser.canonical}")
+        if page in sitemap_pages and parser.noindex:
+            errors.append(f"Sitemap page is noindex: {page.relative_to(ROOT)}")
+        if page in sitemap_pages and parser.canonical != next(
+            url for url in sitemap_urls if (
+                ROOT / urlparse(url).path.strip("/") / "index.html" if urlparse(url).path.strip("/") else ROOT / "index.html"
+            ).resolve() == page
+        ):
+            errors.append(f"Canonical does not match sitemap URL: {page.relative_to(ROOT)} -> {parser.canonical}")
         if parser.h1 != 1:
             errors.append(f"Expected one H1, found {parser.h1}: {page.relative_to(ROOT)}")
         for block in parser.schema_blocks:
