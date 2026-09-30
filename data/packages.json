@@ -1,12 +1,41 @@
 {
   "currency": "IDR",
-  "tax_note": "Harga sudah termasuk PPN 11% sesuai informasi yang saat ini tercantum di website.",
+  "tax_note": "Harga paket Oktober 2026 sudah termasuk PPN 11%.",
   "residential": [
-    {"speed_mbps":20,"price_monthly":"Rp 170.430","label":"Paket Promo","description":"Pilihan ekonomis untuk browsing, belajar online, dan kebutuhan dasar rumah."},
-    {"speed_mbps":35,"price_monthly":"Rp 265.290","label":"Paket Reguler","description":"Cocok untuk aktivitas rumah dan beberapa perangkat."},
-    {"speed_mbps":50,"price_monthly":"Rp 331.890","label":"Paket Reguler","description":"Pilihan populer untuk streaming, belajar, dan gaming."},
-    {"speed_mbps":100,"price_monthly":"Rp 442.890","label":"Paket Reguler","description":"Untuk rumah dengan banyak perangkat dan kebutuhan berat."}
+    {"speed_mbps":35,"price_monthly":"Rp 231.990","label":"Paket Reguler","description":"Cocok untuk aktivitas rumah dan beberapa perangkat."},
+    {"speed_mbps":50,"price_monthly":"Rp 265.290","label":"Paket Reguler","description":"Pilihan paling dicari untuk streaming, belajar, dan gaming."},
+    {"speed_mbps":100,"price_monthly":"Rp 331.890","label":"Paket Reguler","description":"Untuk rumah dengan banyak perangkat dan kebutuhan berat."},
+    {"speed_mbps":150,"price_monthly":"Rp 442.890","label":"Paket Baru","description":"Paket baru ICONNET untuk kebutuhan internet berkecepatan tinggi dan banyak perangkat."}
   ],
+  "xnodebat_october_2026": [
+    {"speed_mbps":10,"price_total_3_months":"Rp 498.390","normal_monthly":"Rp 166.167"},
+    {"speed_mbps":20,"price_total_3_months":"Rp 531.690","normal_monthly":"Rp 177.267"},
+    {"speed_mbps":35,"price_total_3_months":"Rp 598.290","normal_monthly":"Rp 199.467"},
+    {"speed_mbps":50,"price_total_3_months":"Rp 687.090","normal_monthly":"Rp 228.993"},
+    {"speed_mbps":100,"price_total_3_months":"Rp 864.690","normal_monthly":"Rp 288.267"}
+  ],
+  "bundling": {
+    "3_months": [
+      {"speed_mbps":50,"price_monthly":"Rp 265.290","price_total":"Rp 795.870"},
+      {"speed_mbps":100,"price_monthly":"Rp 331.890","price_total":"Rp 995.670"},
+      {"speed_mbps":150,"price_monthly":"Rp 442.890","price_total":"Rp 1.328.670"}
+    ],
+    "6_months": [
+      {"speed_mbps":50,"price_monthly":"Rp 221.075","price_total":"Rp 1.326.450"},
+      {"speed_mbps":100,"price_monthly":"Rp 276.575","price_total":"Rp 1.659.450"},
+      {"speed_mbps":150,"price_monthly":"Rp 369.075","price_total":"Rp 2.214.450"}
+    ],
+    "12_months": [
+      {"speed_mbps":50,"price_monthly":"Rp 220.982","price_total":"Rp 2.651.784"},
+      {"speed_mbps":100,"price_monthly":"Rp 248.918","price_total":"Rp 2.987.016"},
+      {"speed_mbps":150,"price_monthly":"Rp 332.168","price_total":"Rp 3.986.016"}
+    ],
+    "24_months": [
+      {"speed_mbps":50,"price_monthly":"Rp 221.029","price_total":"Rp 5.304.696"},
+      {"speed_mbps":100,"price_monthly":"Rp 235.089","price_total":"Rp 5.642.136"},
+      {"speed_mbps":150,"price_monthly":"Rp 313.714","price_total":"Rp 7.529.136"}
+    ]
+  },
   "business": {
     "speed_note": "Materi website menyebut kecepatan hingga 250 Mbps untuk kebutuhan bisnis. Paket dan harga ICONNET BIZ perlu dikonfirmasi terpisah."
   }

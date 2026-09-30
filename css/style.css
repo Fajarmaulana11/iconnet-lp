@@ -305,7 +305,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .seo-signal-ring.ring-three { width: 310px; height: 310px; animation-delay: 1s; }
 .seo-section { padding: 88px 0; background: var(--bg); }
 .seo-section-alt { background: var(--bg-soft); }
-.seo-package-grid, .seo-benefit-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.seo-package-grid, .seo-benefit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
 .seo-package, .seo-benefit-grid article, .seo-area-box { padding: 28px; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface, #fff); box-shadow: var(--shadow-sm); }
 .seo-package { display: grid; gap: 12px; }
 .seo-package strong { color: var(--text-secondary); font-size: 14px; }
@@ -313,6 +313,9 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .seo-package b span { color: var(--text-muted); font-size: 13px; font-weight: 500; }
 .seo-package p, .seo-benefit-grid p, .seo-two-column p, .seo-note { color: var(--text-secondary); font-size: 14px; }
 .seo-package-highlight { border-color: rgba(11,95,255,0.55); box-shadow: 0 16px 36px rgba(11,95,255,0.13); }
+.seo-package-new { border: 2px solid #d97706; background: linear-gradient(160deg, #fffdf4, #fff 60%, #f0fdfa); }
+.seo-package-badge { display: inline-block; margin-left: 6px; padding: 3px 7px; border-radius: 4px; color: #075985; background: #e0f2fe; font-size: 10px; white-space: nowrap; }
+.seo-package-badge.new { color: #92400e; background: #fef3c7; }
 .seo-note { margin-top: 18px; text-align: center; }
 .seo-two-column { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 42px; }
 .seo-two-column h2 { margin: 14px 0; color: var(--text-primary); font-size: clamp(25px, 3vw, 36px); line-height: 1.2; }
@@ -731,9 +734,9 @@ body[data-theme="dark"] .seo-breadcrumb-wrap { background: #0d1d2d; }
 /* ---- Grid layouts ---- */
 .reguler-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  max-width: 860px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 .promo-grid {
@@ -780,6 +783,60 @@ body[data-theme="dark"] .seo-breadcrumb-wrap { background: #0d1d2d; }
 .paket-card-v2:hover { box-shadow: var(--shadow-md); transform: translateY(-6px); border-color: rgba(11,95,255,0.35); }
 .paket-card-v2.popular { border: 2px solid var(--primary); box-shadow: 0 18px 44px rgba(11,95,255,0.12); }
 .paket-card-v2.bundling-best { border: 2px solid #7C3AED; box-shadow: 0 18px 44px rgba(124,58,237,0.12); }
+.paket-card-v2.package-new {
+  border: 2px solid #d97706;
+  background: linear-gradient(160deg, #fffdf4 0%, #fff 58%, #f0fdfa 100%);
+  box-shadow: 0 18px 44px rgba(217, 119, 6, 0.14);
+}
+.package-new .card-speed-num { color: #b45309; }
+.card-badge.launch { background: #b45309; color: #fff; }
+.new-package-note {
+  color: #7c4a12;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 8px 0 16px;
+}
+
+.bundling-rate-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.bundling-rate-section h3 {
+  margin: 0 0 12px;
+  color: var(--text-primary);
+  font-size: 18px;
+  text-align: center;
+}
+.bundling-rate-scroll { overflow-x: auto; }
+.bundling-rate-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid var(--border);
+  font-size: 14px;
+}
+.bundling-rate-table th,
+.bundling-rate-table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  white-space: nowrap;
+}
+.bundling-rate-table th { color: var(--text-muted); font-size: 12px; }
+.bundling-rate-table td:last-child { font-weight: 700; color: var(--text-primary); }
+.bundling-rate-table tr:last-child td { border-bottom: 0; }
+.bundling-rate-table td span {
+  display: inline-block;
+  margin-left: 5px;
+  color: #075985;
+  background: #e0f2fe;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+}
+.bundling-rate-table td span.rate-new { color: #92400e; background: #fef3c7; }
+.bundling-rate-table tr.rate-popular { background: #f0f9ff; }
  
 .card-badge {
   position: absolute; top: -12px; left: 50%; transform: translateX(-50%);

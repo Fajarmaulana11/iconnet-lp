@@ -71,10 +71,16 @@ def area_markup(areas: list[str]) -> str:
 
 def package_markup(packages: list[dict]) -> str:
     cards = []
-    for index, package in enumerate(packages):
-        highlight = " seo-package-highlight" if index == 2 else ""
+    for package in packages:
+        speed = package["speed_mbps"]
+        highlight = " seo-package-highlight" if speed == 50 else ""
+        is_new = speed == 150
+        new_class = " seo-package-new" if is_new else ""
+        badge = '<span class="seo-package-badge">Paling Dicari</span>' if speed == 50 else ""
+        if is_new:
+            badge = '<span class="seo-package-badge new">Paket Baru</span>'
         cards.append(
-            f"<article class=\"seo-package{highlight}\"><strong>{package['speed_mbps']} Mbps</strong>"
+            f"<article class=\"seo-package{highlight}{new_class}\"><strong>{speed} Mbps {badge}</strong>"
             f"<b>{esc(package['price_monthly'])}<span>/bulan</span></b>"
             f"<p>{esc(package['description'])}</p></article>"
         )
@@ -129,10 +135,10 @@ def service_page(key: str, title: str, h1: str, intro: str, content: str, templa
 
 def service_content(kind: str, packages: dict) -> str:
     if kind == "harga-iconnet":
-        title = "Harga Paket ICONNET Jawa Tengah & Yogyakarta"
+        title = "Harga Paket ICONNET Oktober 2026 Jawa Tengah & Yogyakarta"
         h1 = "Harga Paket ICONNET"
-        intro = "Lihat pilihan paket ICONNET yang tersedia di website, lalu konfirmasi harga dan coverage berdasarkan alamat pemasangan Anda."
-        content = f"""<section class=\"seo-section\"><div class=\"container\"><div class=\"section-header\"><p class=\"section-label\">Harga Transparan</p><h2 class=\"section-title\">Pilihan Paket Internet ICONNET</h2><p class=\"section-sub\">Harga di bawah mengikuti informasi pada homepage dan perlu dikonfirmasi sebelum pendaftaran.</p></div><div class=\"seo-package-grid\">{package_markup(packages['residential'])}</div><p class=\"seo-note\">{esc(packages['tax_note'])} Konfirmasi promo dan biaya pemasangan melalui WhatsApp.</p></div></section><section class=\"seo-section seo-section-alt\"><div class=\"container seo-two-column\"><div><h2>Cek harga sesuai lokasi</h2><p>Harga dan ketersediaan dapat bergantung pada area layanan. Lanjutkan ke halaman coverage atau hubungi tim untuk validasi alamat.</p></div><div><a class=\"btn-card primary\" href=\"/cek-coverage-iconnet/\">Cek Coverage</a> <a class=\"btn-card\" href=\"/cara-daftar-iconnet/\">Cara Daftar</a></div></div></section>"""
+        intro = "Bandingkan harga reguler ICONNET Oktober 2026, promo XNODEBAT tiga bulan, dan bundling. Seluruh harga paket di halaman ini sudah termasuk PPN 11%."
+        content = f"""<section class=\"seo-section\"><div class=\"container\"><div class=\"section-header\"><p class=\"section-label\">Harga Transparan</p><h2 class=\"section-title\">Paket ICONNET Oktober 2026</h2><p class=\"section-sub\">Harga sudah termasuk PPN 11%. Promo dan coverage dikonfirmasi berdasarkan alamat pemasangan.</p></div><div class=\"seo-package-grid\">{package_markup(packages['residential'])}</div><p class=\"seo-note\">{esc(packages['tax_note'])} Tanyakan harga Promo XNODEBAT dan tarif bundling melalui WhatsApp.</p></div></section><section class=\"seo-section seo-section-alt\"><div class=\"container seo-two-column\"><div><h2>Cek harga sesuai lokasi</h2><p>Harga dan ketersediaan dapat bergantung pada area layanan. Lanjutkan ke halaman coverage atau hubungi tim untuk validasi alamat.</p></div><div><a class=\"btn-card primary\" href=\"/cek-coverage-iconnet/\">Cek Coverage</a> <a class=\"btn-card\" href=\"/cara-daftar-iconnet/\">Cara Daftar</a></div></div></section>"""
     elif kind == "cara-daftar-iconnet":
         title = "Cara Daftar ICONNET Online Jawa Tengah & Yogyakarta"
         h1 = "Cara Daftar ICONNET Online"

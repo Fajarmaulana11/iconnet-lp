@@ -1,14 +1,14 @@
 {
   "promos": [
     {
-      "id": "gratis-biaya-pemasangan-september-2026",
-      "title": "Gratis Biaya Pemasangan September 2026",
-      "description": "Gratis biaya pemasangan untuk paket yang memenuhi ketentuan, kecuali ICONNET BIZ berdasarkan materi website saat ini.",
-      "start_date": "2026-09-01",
-      "end_date": null,
-      "status": "needs_confirmation",
+      "id": "xnodebat-oktober-2026",
+      "title": "Promo XNODEBAT Oktober 2026",
+      "description": "Paket Promo XNODEBAT dibayar sekaligus untuk 3 bulan. Harga sudah termasuk PPN 11%.",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-31",
+      "status": "scheduled",
       "display_on_homepage": true,
-      "note": "Tanggal berakhir belum tersedia di project. Konfirmasi status promo melalui WhatsApp sebelum menampilkan klaim aktif setelah September 2026."
+      "note": "Promo berlaku untuk pilihan 10, 20, 35, 50, dan 100 Mbps."
     }
   ]
 }
